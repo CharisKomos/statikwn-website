@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STATIKWN — Civil Engineering Services</title>
+  <meta name="description" content="STATIKWN provides professional civil engineering services, structural design, and project consulting. Request a quote today." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">STATIKWN</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#quote">Get a Quote</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <h1>Engineering Structures<br />Built to Last</h1>
+      <p>STATIKWN delivers reliable civil and structural engineering services — from concept and design to consulting and project supervision.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-primary">Request a Quote</a>
+        <a href="#portfolio" class="btn btn-outline">View Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-subtitle">Comprehensive engineering solutions tailored to your project.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon">🏗️</div>
+          <h3>Structural Design</h3>
+          <p>Detailed structural analysis and design for residential, commercial, and industrial buildings.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📐</div>
+          <h3>Consulting</h3>
+          <p>Expert advice on feasibility, code compliance, materials, and structural integrity.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">👷</div>
+          <h3>Project Supervision</h3>
+          <p>On-site supervision and quality control to ensure construction matches design intent.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔍</div>
+          <h3>Inspections & Assessments</h3>
+          <p>Structural inspections, condition assessments, and reinforcement recommendations.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Permits & Documentation</h3>
+          <p>Preparation of technical drawings and documentation for building permits.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">♻️</div>
+          <h3>Renovation Engineering</h3>
+          <p>Structural solutions for renovations, extensions, and adaptive reuse of existing buildings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section section-alt" id="portfolio">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-subtitle">A selection of completed and ongoing projects.</p>
+      <div class="grid grid-3">
+        <article class="project">
+          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj1/600/400')"></div>
+          <div class="project-body">
+            <h3>Residential Complex</h3>
+            <p>Structural design of a 4-story residential building, including foundation and seismic detailing.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj2/600/400')"></div>
+          <div class="project-body">
+            <h3>Commercial Warehouse</h3>
+            <p>Steel frame design for a large-span industrial warehouse with mezzanine flooring.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj3/600/400')"></div>
+          <div class="project-body">
+            <h3>Bridge Assessment</h3>
+            <p>Condition assessment and load-rating analysis for a reinforced concrete bridge.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj4/600/400')"></div>
+          <div class="project-body">
+            <h3>Office Renovation</h3>
+            <p>Structural reinforcement and load redistribution for an office floor conversion.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj5/600/400')"></div>
+          <div class="project-body">
+            <h3>Retaining Wall System</h3>
+            <p>Design of cantilever retaining walls for a hillside development site.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj6/600/400')"></div>
+          <div class="project-body">
+            <h3>Foundation Engineering</h3>
+            <p>Pile foundation design for a building on soft soil conditions.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section class="section" id="quote">
+    <div class="container narrow">
+      <h2 class="section-title">Request a Quote</h2>
+      <p class="section-subtitle">Tell us about your project and we'll get back to you with an estimate.</p>
+
+      <!-- IMPORTANT: replace the action URL with your own Formspree endpoint (see hosting notes) -->
+      <form class="quote-form" id="quoteForm" action="https://formspree.io/f/your_form_id" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="project-type">Project Type</label>
+            <select id="project-type" name="project-type">
+              <option value="">Select…</option>
+              <option>Structural Design</option>
+              <option>Consulting</option>
+              <option>Inspection / Assessment</option>
+              <option>Renovation</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Project Details *</label>
+          <textarea id="message" name="message" rows="5" required
+            placeholder="Describe your project, location, scope, and timeline…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="grid grid-3 contact-grid">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p><a href="mailto:info@statikwn.com">info@statikwn.com</a></p>
+        </div>
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <p><a href="tel:+10000000000">+1 (000) 000-0000</a></p>
+        </div>
+        <div class="contact-item">
+          <h3>Office</h3>
+          <p>Your Street Address<br />City, Country</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">STATIKWN</p>
+      <p>Civil &amp; Structural Engineering Services</p>
+      <p class="footer-copy">© <span id="year"></span> STATIKWN. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

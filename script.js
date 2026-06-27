@@ -80,8 +80,8 @@ const translations = {
     'contact.email': 'Email',
     'contact.phone': 'Τηλέφωνο',
     'contact.office': 'Γραφείο',
-    'contact.addr1': 'Διεύθυνση',
-    'contact.addr2': 'Πόλη, Χώρα',
+    'contact.addr1': 'Ιωνίας 3, 8016',
+    'contact.addr2': 'Πάφος, Κύπρος',
 
     'footer.tagline': 'Υπηρεσίες Πολιτικού Μηχανικού & Στατικών Μελετών',
     'footer.copy': '© {year} STATIKΩN. Με την επιφύλαξη παντός δικαιώματος.'
@@ -151,8 +151,8 @@ const translations = {
     'contact.email': 'Email',
     'contact.phone': 'Phone',
     'contact.office': 'Office',
-    'contact.addr1': 'Your Street Address',
-    'contact.addr2': 'City, Country',
+    'contact.addr1': 'Ionias 3, 8016',
+    'contact.addr2': 'Paphos, Cyprus',
 
     'footer.tagline': 'Civil & Structural Engineering Services',
     'footer.copy': '© {year} STATIKΩN. All rights reserved.'

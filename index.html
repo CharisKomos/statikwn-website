@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STATIKWN — Civil Engineering Services</title>
-  <meta name="description" content="STATIKWN provides professional civil engineering services, structural design, and project consulting. Request a quote today." />
+  <title data-i18n="meta.title">STATIKΩN — Υπηρεσίες Πολιτικού Μηχανικού</title>
+  <meta name="description" data-i18n="meta.desc" content="Η STATIKΩN προσφέρει επαγγελματικές υπηρεσίες πολιτικού μηχανικού, στατικές μελέτες και συμβουλευτική έργων. Ζητήστε προσφορά σήμερα." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body>
 
   <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#home" class="brand">STATIKWN</a>
+      <a href="#home" class="brand"><img src="images/logo.png" alt="STATIKΩN" class="brand-logo" /></a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#quote">Get a Quote</a>
-        <a href="#contact">Contact</a>
+        <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Έργα</a>
+        <a href="#quote" data-i18n="nav.quote">Ζητήστε Προσφορά</a>
+        <a href="#contact" data-i18n="nav.contact">Επικοινωνία</a>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="el">ΕΛ</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -28,11 +34,11 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="container hero-inner">
-      <h1>Engineering Structures<br />Built to Last</h1>
-      <p>STATIKWN delivers reliable civil and structural engineering services — from concept and design to consulting and project supervision.</p>
+      <h1 data-i18n-html="hero.title">Κατασκευές Φτιαγμένες<br />να Διαρκούν</h1>
+      <p data-i18n="hero.subtitle">Η STATIKΩN προσφέρει αξιόπιστες υπηρεσίες πολιτικού μηχανικού και στατικών μελετών — από τη σύλληψη και τον σχεδιασμό έως τη συμβουλευτική και την επίβλεψη έργων.</p>
       <div class="hero-actions">
-        <a href="#quote" class="btn btn-primary">Request a Quote</a>
-        <a href="#portfolio" class="btn btn-outline">View Projects</a>
+        <a href="#quote" class="btn btn-primary" data-i18n="hero.cta1">Ζητήστε Προσφορά</a>
+        <a href="#portfolio" class="btn btn-outline" data-i18n="hero.cta2">Δείτε τα Έργα</a>
       </div>
     </div>
   </section>
@@ -40,38 +46,38 @@
   <!-- SERVICES -->
   <section class="section" id="services">
     <div class="container">
-      <h2 class="section-title">Services</h2>
-      <p class="section-subtitle">Comprehensive engineering solutions tailored to your project.</p>
+      <h2 class="section-title" data-i18n="services.title">Υπηρεσίες</h2>
+      <p class="section-subtitle" data-i18n="services.subtitle">Ολοκληρωμένες λύσεις μηχανικής προσαρμοσμένες στο έργο σας.</p>
       <div class="grid grid-3">
         <div class="card">
           <div class="card-icon">🏗️</div>
-          <h3>Structural Design</h3>
-          <p>Detailed structural analysis and design for residential, commercial, and industrial buildings.</p>
+          <h3 data-i18n="svc.struct.title">Στατική Μελέτη</h3>
+          <p data-i18n="svc.struct.desc">Λεπτομερής στατική ανάλυση και σχεδιασμός για κατοικίες, εμπορικά και βιομηχανικά κτίρια.</p>
         </div>
         <div class="card">
           <div class="card-icon">📐</div>
-          <h3>Consulting</h3>
-          <p>Expert advice on feasibility, code compliance, materials, and structural integrity.</p>
+          <h3 data-i18n="svc.consult.title">Συμβουλευτικές Υπηρεσίες</h3>
+          <p data-i18n="svc.consult.desc">Εξειδικευμένες συμβουλές για σκοπιμότητα, συμμόρφωση με κανονισμούς, υλικά και δομική ακεραιότητα.</p>
         </div>
         <div class="card">
           <div class="card-icon">👷</div>
-          <h3>Project Supervision</h3>
-          <p>On-site supervision and quality control to ensure construction matches design intent.</p>
+          <h3 data-i18n="svc.superv.title">Επίβλεψη Έργων</h3>
+          <p data-i18n="svc.superv.desc">Επίβλεψη επί τόπου και έλεγχος ποιότητας ώστε η κατασκευή να ανταποκρίνεται στη μελέτη.</p>
         </div>
         <div class="card">
           <div class="card-icon">🔍</div>
-          <h3>Inspections & Assessments</h3>
-          <p>Structural inspections, condition assessments, and reinforcement recommendations.</p>
+          <h3 data-i18n="svc.inspect.title">Έλεγχοι & Αξιολογήσεις</h3>
+          <p data-i18n="svc.inspect.desc">Δομικοί έλεγχοι, αξιολογήσεις κατάστασης και προτάσεις ενίσχυσης.</p>
         </div>
         <div class="card">
           <div class="card-icon">📋</div>
-          <h3>Permits & Documentation</h3>
-          <p>Preparation of technical drawings and documentation for building permits.</p>
+          <h3 data-i18n="svc.permit.title">Άδειες & Τεκμηρίωση</h3>
+          <p data-i18n="svc.permit.desc">Προετοιμασία τεχνικών σχεδίων και εγγράφων για άδειες δόμησης.</p>
         </div>
         <div class="card">
           <div class="card-icon">♻️</div>
-          <h3>Renovation Engineering</h3>
-          <p>Structural solutions for renovations, extensions, and adaptive reuse of existing buildings.</p>
+          <h3 data-i18n="svc.renov.title">Μηχανική Ανακαινίσεων</h3>
+          <p data-i18n="svc.renov.desc">Δομικές λύσεις για ανακαινίσεις, επεκτάσεις και επανάχρηση υφιστάμενων κτιρίων.</p>
         </div>
       </div>
     </div>
@@ -80,49 +86,35 @@
   <!-- PORTFOLIO -->
   <section class="section section-alt" id="portfolio">
     <div class="container">
-      <h2 class="section-title">Portfolio</h2>
-      <p class="section-subtitle">A selection of completed and ongoing projects.</p>
-      <div class="grid grid-3">
+      <h2 class="section-title" data-i18n="portfolio.title">Έργα</h2>
+      <p class="section-subtitle" data-i18n="portfolio.subtitle">Μια επιλογή από ολοκληρωμένα και τρέχοντα έργα.</p>
+      <div class="grid grid-2">
         <article class="project">
-          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj1/600/400')"></div>
+          <div class="project-img" style="background-image:url('images/613093697_17873355420474517_6813692734217147184_n.jpg')"></div>
           <div class="project-body">
-            <h3>Residential Complex</h3>
-            <p>Structural design of a 4-story residential building, including foundation and seismic detailing.</p>
+            <h3 data-i18n="proj.1.title">Πολυκατοικία</h3>
+            <p data-i18n="proj.1.desc">Τριώροφη οικιστική ανάπτυξη με δώμα, ιδιωτικά μπαλκόνια και καλυμμένο χώρο στάθμευσης στο ισόγειο.</p>
           </div>
         </article>
         <article class="project">
-          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj2/600/400')"></div>
+          <div class="project-img" style="background-image:url('images/613116565_17873354967474517_4799002304266825979_n.jpg')"></div>
           <div class="project-body">
-            <h3>Commercial Warehouse</h3>
-            <p>Steel frame design for a large-span industrial warehouse with mezzanine flooring.</p>
+            <h3 data-i18n="proj.2.title">Μοντέρνες Διπλοκατοικίες</h3>
+            <p data-i18n="proj.2.desc">Ζεύγος σύγχρονων διώροφων κατοικιών με γλυπτικές όψεις, πλαισιωμένα ανοίγματα και διαμορφωμένους κήπους.</p>
           </div>
         </article>
         <article class="project">
-          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj3/600/400')"></div>
+          <div class="project-img" style="background-image:url('images/613518455_17873354928474517_3693577409585976063_n.jpg')"></div>
           <div class="project-body">
-            <h3>Bridge Assessment</h3>
-            <p>Condition assessment and load-rating analysis for a reinforced concrete bridge.</p>
+            <h3 data-i18n="proj.3.title">Πολυώροφη Πολυκατοικία</h3>
+            <p data-i18n="proj.3.desc">Πολυώροφο κτίριο διαμερισμάτων με προβόλους μπαλκονιών και κομψό κατακόρυφο πυρήνα κυκλοφορίας.</p>
           </div>
         </article>
         <article class="project">
-          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj4/600/400')"></div>
+          <div class="project-img" style="background-image:url('images/628297944_17877451152474517_4327151025084528472_n.webp')"></div>
           <div class="project-body">
-            <h3>Office Renovation</h3>
-            <p>Structural reinforcement and load redistribution for an office floor conversion.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj5/600/400')"></div>
-          <div class="project-body">
-            <h3>Retaining Wall System</h3>
-            <p>Design of cantilever retaining walls for a hillside development site.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-img" style="background-image:url('https://picsum.photos/seed/proj6/600/400')"></div>
-          <div class="project-body">
-            <h3>Foundation Engineering</h3>
-            <p>Pile foundation design for a building on soft soil conditions.</p>
+            <h3 data-i18n="proj.4.title">Μονοκατοικία</h3>
+            <p data-i18n="proj.4.desc">Μονοκατοικία με εμφανές σκυρόδεμα, καμπύλους τοίχους και υαλοστάσια από δάπεδο έως οροφή.</p>
           </div>
         </article>
       </div>
@@ -132,44 +124,45 @@
   <!-- QUOTE FORM -->
   <section class="section" id="quote">
     <div class="container narrow">
-      <h2 class="section-title">Request a Quote</h2>
-      <p class="section-subtitle">Tell us about your project and we'll get back to you with an estimate.</p>
+      <h2 class="section-title" data-i18n="quote.title">Ζητήστε Προσφορά</h2>
+      <p class="section-subtitle" data-i18n="quote.subtitle">Πείτε μας για το έργο σας και θα επικοινωνήσουμε μαζί σας με μια εκτίμηση.</p>
 
       <!-- IMPORTANT: replace the action URL with your own Formspree endpoint (see hosting notes) -->
       <form class="quote-form" id="quoteForm" action="https://formspree.io/f/your_form_id" method="POST">
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Full Name *</label>
+            <label for="name" data-i18n="form.name">Ονοματεπώνυμο *</label>
             <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
-            <label for="email">Email *</label>
+            <label for="email" data-i18n="form.email">Email *</label>
             <input type="email" id="email" name="email" required />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="phone">Phone</label>
+            <label for="phone" data-i18n="form.phone">Τηλέφωνο</label>
             <input type="tel" id="phone" name="phone" />
           </div>
           <div class="form-group">
-            <label for="project-type">Project Type</label>
+            <label for="project-type" data-i18n="form.ptype">Τύπος Έργου</label>
             <select id="project-type" name="project-type">
-              <option value="">Select…</option>
-              <option>Structural Design</option>
-              <option>Consulting</option>
-              <option>Inspection / Assessment</option>
-              <option>Renovation</option>
-              <option>Other</option>
+              <option value="" data-i18n="form.select">Επιλέξτε…</option>
+              <option data-i18n="form.opt.struct">Στατική Μελέτη</option>
+              <option data-i18n="form.opt.consult">Συμβουλευτική</option>
+              <option data-i18n="form.opt.inspect">Έλεγχος / Αξιολόγηση</option>
+              <option data-i18n="form.opt.renov">Ανακαίνιση</option>
+              <option data-i18n="form.opt.other">Άλλο</option>
             </select>
           </div>
         </div>
         <div class="form-group">
-          <label for="message">Project Details *</label>
+          <label for="message" data-i18n="form.details">Λεπτομέρειες Έργου *</label>
           <textarea id="message" name="message" rows="5" required
-            placeholder="Describe your project, location, scope, and timeline…"></textarea>
+            data-i18n-placeholder="form.details.ph"
+            placeholder="Περιγράψτε το έργο σας, την τοποθεσία, το αντικείμενο και το χρονοδιάγραμμα…"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Αποστολή Αιτήματος</button>
         <p class="form-note" id="formNote"></p>
       </form>
     </div>
@@ -178,19 +171,19 @@
   <!-- CONTACT -->
   <section class="section section-alt" id="contact">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title" data-i18n="contact.title">Επικοινωνία</h2>
       <div class="grid grid-3 contact-grid">
         <div class="contact-item">
-          <h3>Email</h3>
+          <h3 data-i18n="contact.email">Email</h3>
           <p><a href="mailto:info@statikwn.com">info@statikwn.com</a></p>
         </div>
         <div class="contact-item">
-          <h3>Phone</h3>
+          <h3 data-i18n="contact.phone">Τηλέφωνο</h3>
           <p><a href="tel:+10000000000">+1 (000) 000-0000</a></p>
         </div>
         <div class="contact-item">
-          <h3>Office</h3>
-          <p>Your Street Address<br />City, Country</p>
+          <h3 data-i18n="contact.office">Γραφείο</h3>
+          <p><span data-i18n="contact.addr1">Διεύθυνση</span><br /><span data-i18n="contact.addr2">Πόλη, Χώρα</span></p>
         </div>
       </div>
     </div>
@@ -199,9 +192,9 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-brand">STATIKWN</p>
-      <p>Civil &amp; Structural Engineering Services</p>
-      <p class="footer-copy">© <span id="year"></span> STATIKWN. All rights reserved.</p>
+      <img src="images/logo.png" alt="STATIKΩN" class="footer-logo" />
+      <p data-i18n="footer.tagline">Υπηρεσίες Πολιτικού Μηχανικού & Στατικών Μελετών</p>
+      <p class="footer-copy" id="footerCopy"></p>
     </div>
   </footer>
 

@@ -163,6 +163,10 @@ const SUPPORTED = ['el', 'en'];
 const DEFAULT_LANG = 'el';
 let currentLang = DEFAULT_LANG;
 
+// Modules (e.g. the portfolio gallery) can register here to be re-rendered
+// whenever the language changes.
+const langListeners = [];
+
 function t(key) {
   const dict = translations[currentLang] || translations[DEFAULT_LANG];
   return key in dict ? dict[key] : key;
@@ -203,6 +207,9 @@ function applyLanguage(lang) {
   });
 
   try { localStorage.setItem('lang', lang); } catch (e) { /* ignore */ }
+
+  // let registered modules refresh their own dynamic content
+  langListeners.forEach(fn => { try { fn(currentLang); } catch (e) { /* ignore */ } });
 }
 
 // wire up the switch buttons
@@ -248,3 +255,156 @@ form.addEventListener('submit', async (e) => {
     note.className = 'form-note error';
   }
 });
+
+/* ------------------------------------------------------------------ */
+/*  Portfolio: grouped gallery + full-screen lightbox                  */
+/* ------------------------------------------------------------------ */
+/*
+ * Content lives in the /gallery folder — one sub-folder per group, with
+ * photos + one .txt caption per photo. A GitHub Action scans that folder
+ * on every push and regenerates gallery.json, which is loaded below.
+ * You never edit this file to add photos — see gallery/README.txt.
+ */
+let galleryGroups = [];
+
+async function loadGallery() {
+  try {
+    const res = await fetch('gallery.json', { cache: 'no-cache' });
+    if (res.ok) galleryGroups = await res.json();
+    else console.warn('gallery.json not found — has the build/GitHub Action run yet?');
+  } catch (e) {
+    console.warn('Could not load gallery.json:', e);
+  }
+  renderGroups();
+}
+
+const groupsContainer = document.getElementById('galleryGroups');
+const lightbox   = document.getElementById('lightbox');
+const lbBody     = document.getElementById('lbBody');
+const lbStage    = document.getElementById('lbStage');
+const lbTitle    = document.getElementById('lbTitle');
+const lbImage    = document.getElementById('lbImage');
+const lbDesc     = document.getElementById('lbDesc');
+const lbThumbs   = document.getElementById('lbThumbs');
+const lbClose    = document.getElementById('lbClose');
+const lbPrev     = document.getElementById('lbPrev');
+const lbNext     = document.getElementById('lbNext');
+
+let activeGroup = 0;
+let activeIndex = 0;
+
+function tr(obj) {
+  // pick the current language from a { el, en } object, falling back to Greek
+  return (obj && (obj[currentLang] || obj[DEFAULT_LANG])) || '';
+}
+
+function photosLabel(n) {
+  if (currentLang === 'en') return n + (n === 1 ? ' photo' : ' photos');
+  return n + (n === 1 ? ' φωτογραφία' : ' φωτογραφίες');
+}
+
+// Build the clickable group cards in the portfolio grid
+function renderGroups() {
+  if (!groupsContainer) return;
+  groupsContainer.innerHTML = '';
+  galleryGroups.forEach((group, gi) => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'group-card';
+    card.style.backgroundImage = `url('${group.cover}')`;
+    card.setAttribute('aria-label', tr(group.title));
+    card.innerHTML =
+      '<span class="group-overlay"></span>' +
+      '<span class="group-label">' +
+        `<span class="group-title">${tr(group.title)}</span>` +
+        `<span class="group-count">${photosLabel(group.images.length)}</span>` +
+      '</span>';
+    card.addEventListener('click', () => openLightbox(gi, 0));
+    groupsContainer.appendChild(card);
+  });
+}
+
+// Paint the lightbox for the current group + image
+function renderLightbox() {
+  const group = galleryGroups[activeGroup];
+  const item  = group.images[activeIndex];
+  const multi = group.images.length > 1;
+
+  lbTitle.textContent = tr(group.title);
+  lbImage.src = item.src;
+  lbImage.alt = `${tr(group.title)} — ${activeIndex + 1}/${group.images.length}`;
+  lbDesc.textContent = tr(item.desc);
+
+  lbPrev.hidden = !multi;
+  lbNext.hidden = !multi;
+
+  lbThumbs.innerHTML = '';
+  if (multi) {
+    group.images.forEach((im, i) => {
+      const th = document.createElement('img');
+      th.className = 'lb-thumb' + (i === activeIndex ? ' active' : '');
+      th.src = im.src;
+      th.alt = '';
+      th.addEventListener('click', () => { activeIndex = i; renderLightbox(); });
+      lbThumbs.appendChild(th);
+    });
+  }
+}
+
+function openLightbox(groupIndex, imageIndex) {
+  activeGroup = groupIndex;
+  activeIndex = imageIndex;
+  renderLightbox();
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lb-open');
+  lbClose.focus();
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lb-open');
+}
+
+function step(delta) {
+  const imgs = galleryGroups[activeGroup].images;
+  activeIndex = (activeIndex + delta + imgs.length) % imgs.length;
+  renderLightbox();
+}
+
+lbClose.addEventListener('click', closeLightbox);
+lbPrev.addEventListener('click', () => step(-1));
+lbNext.addEventListener('click', () => step(1));
+
+// Click on the backdrop (but not the image / controls) closes the layer
+[lightbox, lbBody, lbStage].forEach(el =>
+  el.addEventListener('click', (e) => { if (e.target === el) closeLightbox(); })
+);
+
+// Keyboard: Esc to close, arrows to navigate
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') step(-1);
+  else if (e.key === 'ArrowRight') step(1);
+});
+
+// Swipe left/right on touch devices
+let touchX = null;
+lbStage.addEventListener('touchstart', (e) => { touchX = e.changedTouches[0].clientX; }, { passive: true });
+lbStage.addEventListener('touchend', (e) => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 40 && galleryGroups[activeGroup].images.length > 1) step(dx < 0 ? 1 : -1);
+  touchX = null;
+});
+
+// Re-render when the language changes
+langListeners.push(() => {
+  renderGroups();
+  if (lightbox.classList.contains('open')) renderLightbox();
+});
+
+// Load gallery content from gallery.json (built from the /gallery folder)
+loadGallery();

@@ -1,0 +1,41 @@
+name: Build gallery
+
+# Whenever photos/captions change in the gallery folder (or the build script
+# itself changes), regenerate gallery.json and commit it back. This is what
+# makes "just drop photos in a folder" work — no manual step needed.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'gallery/**'
+      - 'scripts/build-gallery.js'
+      - '.github/workflows/build-gallery.yml'
+  workflow_dispatch: {}   # allows running it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate gallery.json
+        run: node scripts/build-gallery.js
+
+      - name: Commit gallery.json if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gallery.json
+          if git diff --staged --quiet; then
+            echo "gallery.json already up to date — nothing to commit."
+          else
+            git commit -m "Rebuild gallery.json from /gallery [skip ci]"
+            git push
+          fi

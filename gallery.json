@@ -1,0 +1,60 @@
+[
+  {
+    "id": "apartment-buildings",
+    "title": {
+      "el": "Πολυκατοικίες",
+      "en": "Apartment Buildings"
+    },
+    "cover": "gallery/1%20-%20Apartment%20Buildings/multi-storey-block.jpg",
+    "images": [
+      {
+        "src": "gallery/1%20-%20Apartment%20Buildings/multi-storey-block.jpg",
+        "desc": {
+          "el": "Πολυώροφο κτίριο διαμερισμάτων με προβόλους μπαλκονιών και κομψό κατακόρυφο πυρήνα κυκλοφορίας.",
+          "en": "Multi-storey apartment building with cantilevered balconies and a sleek vertical circulation core."
+        }
+      },
+      {
+        "src": "gallery/1%20-%20Apartment%20Buildings/three-storey-residential.jpg",
+        "desc": {
+          "el": "Τριώροφη οικιστική ανάπτυξη με δώμα, ιδιωτικά μπαλκόνια και καλυμμένο χώρο στάθμευσης στο ισόγειο.",
+          "en": "Three-storey residential development with rooftop terrace, private balconies, and covered ground-floor parking."
+        }
+      }
+    ]
+  },
+  {
+    "id": "semi-detached-houses",
+    "title": {
+      "el": "Διπλοκατοικίες",
+      "en": "Semi-Detached Houses"
+    },
+    "cover": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
+    "images": [
+      {
+        "src": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
+        "desc": {
+          "el": "Ζεύγος σύγχρονων διώροφων κατοικιών με γλυπτικές όψεις, πλαισιωμένα ανοίγματα και διαμορφωμένους κήπους.",
+          "en": "Pair of contemporary two-storey homes with sculpted façades, framed openings, and landscaped front gardens."
+        }
+      }
+    ]
+  },
+  {
+    "id": "detached-villas",
+    "title": {
+      "el": "Μονοκατοικίες",
+      "en": "Detached Villas"
+    },
+    "cover": "gallery/3%20-%20Detached%20Villas/concrete-villa.webp",
+    "images": [
+      {
+        "src": "gallery/3%20-%20Detached%20Villas/concrete-villa.webp",
+        "desc": {
+          "el": "Μονοκατοικία με εμφανές σκυρόδεμα, καμπύλους τοίχους και υαλοστάσια από δάπεδο έως οροφή.",
+          "en": "Single-family villa featuring board-formed concrete, curved walls, and floor-to-ceiling glazing."
+        }
+      }
+    ]
+  }
+]

@@ -88,36 +88,8 @@
     <div class="container">
       <h2 class="section-title" data-i18n="portfolio.title">Έργα</h2>
       <p class="section-subtitle" data-i18n="portfolio.subtitle">Μια επιλογή από ολοκληρωμένα και τρέχοντα έργα.</p>
-      <div class="grid grid-2">
-        <article class="project">
-          <div class="project-img" style="background-image:url('images/613093697_17873355420474517_6813692734217147184_n.jpg')"></div>
-          <div class="project-body">
-            <h3 data-i18n="proj.1.title">Πολυκατοικία</h3>
-            <p data-i18n="proj.1.desc">Τριώροφη οικιστική ανάπτυξη με δώμα, ιδιωτικά μπαλκόνια και καλυμμένο χώρο στάθμευσης στο ισόγειο.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-img" style="background-image:url('images/613116565_17873354967474517_4799002304266825979_n.jpg')"></div>
-          <div class="project-body">
-            <h3 data-i18n="proj.2.title">Μοντέρνες Διπλοκατοικίες</h3>
-            <p data-i18n="proj.2.desc">Ζεύγος σύγχρονων διώροφων κατοικιών με γλυπτικές όψεις, πλαισιωμένα ανοίγματα και διαμορφωμένους κήπους.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-img" style="background-image:url('images/613518455_17873354928474517_3693577409585976063_n.jpg')"></div>
-          <div class="project-body">
-            <h3 data-i18n="proj.3.title">Πολυώροφη Πολυκατοικία</h3>
-            <p data-i18n="proj.3.desc">Πολυώροφο κτίριο διαμερισμάτων με προβόλους μπαλκονιών και κομψό κατακόρυφο πυρήνα κυκλοφορίας.</p>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-img" style="background-image:url('images/628297944_17877451152474517_4327151025084528472_n.webp')"></div>
-          <div class="project-body">
-            <h3 data-i18n="proj.4.title">Μονοκατοικία</h3>
-            <p data-i18n="proj.4.desc">Μονοκατοικία με εμφανές σκυρόδεμα, καμπύλους τοίχους και υαλοστάσια από δάπεδο έως οροφή.</p>
-          </div>
-        </article>
-      </div>
+      <!-- Grouped gallery: cards are built by script.js from galleryGroups -->
+      <div class="grid grid-3 gallery-groups" id="galleryGroups"></div>
     </div>
   </section>
 
@@ -197,6 +169,21 @@
       <p class="footer-copy" id="footerCopy"></p>
     </div>
   </footer>
+
+  <!-- PORTFOLIO LIGHTBOX (built/controlled by script.js) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close">&times;</button>
+    <div class="lb-body" id="lbBody">
+      <h3 class="lb-title" id="lbTitle"></h3>
+      <div class="lb-stage" id="lbStage">
+        <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous">&#8249;</button>
+        <img class="lb-image" id="lbImage" src="" alt="" />
+        <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next">&#8250;</button>
+      </div>
+      <p class="lb-desc" id="lbDesc"></p>
+      <div class="lb-thumbs" id="lbThumbs"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

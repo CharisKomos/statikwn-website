@@ -26,7 +26,7 @@
   {
     "id": "semi-detached-houses",
     "title": {
-      "el": "Διπλοκατοικίες",
+      "el": "Διώροφη κατοικία από οπλισμένο σκυρόδεμα",
       "en": "Semi-Detached Houses"
     },
     "cover": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
@@ -34,8 +34,8 @@
       {
         "src": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
         "desc": {
-          "el": "Ζεύγος σύγχρονων διώροφων κατοικιών με γλυπτικές όψεις, πλαισιωμένα ανοίγματα και διαμορφωμένους κήπους.",
-          "en": "Pair of contemporary two-storey homes with sculpted façades, framed openings, and landscaped front gardens."
+          "el": "Στατική και αντισεισμική μελέτη σύγχρονης διώροφης κατοικίας από οπλισμένο σκυρόδεμα, σχεδιασμένη σύμφωνα με τους Ευρωκώδικες με έμφαση στη δομική ασφάλεια, την αρχιτεκτονική ελευθερία και τη λειτουργικότητα του χώρου.",
+          "en": "Structural and seismic design of a modern two-storey reinforced concrete residence, designed in accordance with the Eurocodes, with emphasis on structural safety, architectural freedom, and functional living spaces."
         }
       }
     ]
@@ -51,8 +51,8 @@
       {
         "src": "gallery/3%20-%20Detached%20Villas/concrete-villa.webp",
         "desc": {
-          "el": "Μονοκατοικία με εμφανές σκυρόδεμα, καμπύλους τοίχους και υαλοστάσια από δάπεδο έως οροφή.",
-          "en": "Single-family villa featuring board-formed concrete, curved walls, and floor-to-ceiling glazing."
+          "el": "Στατική και αντισεισμική μελέτη σύγχρονης διώροφης κατοικίας από οπλισμένο σκυρόδεμα, σχεδιασμένη σύμφωνα με τους Ευρωκώδικες με έμφαση στην ασφάλεια, τη λειτουργικότητα και τον ορθολογικό δομικό σχεδιασμό.",
+          "en": "Structural and seismic design of a modern two-storey reinforced concrete residence, designed in accordance with the Eurocodes, with emphasis on safety, functionality, and rational structural design."
         }
       }
     ]

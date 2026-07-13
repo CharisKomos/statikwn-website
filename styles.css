@@ -107,7 +107,26 @@ body {
   transition: transform .2s;
 }
 .card:hover { transform: translateY(-4px); }
-.card-icon { font-size: 2rem; margin-bottom: .75rem; }
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 1.25rem;
+  color: var(--blue-700);
+  background: var(--blue-50);
+  border: 1px solid rgba(30, 111, 217, 0.16);
+  border-radius: 12px;
+  font-size: 1.65rem;
+  transition: transform 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.card:hover .card-icon {
+  transform: translateY(-3px);
+  color: var(--white);
+  background: var(--blue-500);
+}
 .card h3 { color: var(--blue-700); margin-bottom: .5rem; }
 .card p { color: var(--gray-500); }
 

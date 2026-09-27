@@ -5,7 +5,43 @@
       "el": "Πολυκατοικίες",
       "en": "Apartment Buildings"
     },
+
+    "category": "residential",
+
+    "categoryLabel": {
+      "el": "Στατική & Αντισεισμική Μελέτη",
+      "en": "Structural & Seismic Design"
+    },
+
+    "location": {
+      "el": "Κύπρος",
+      "en": "Cyprus"
+    },
+
+    "description": {
+      "el": "Στατική και αντισεισμική μελέτη πολυώροφων οικιστικών αναπτύξεων από οπλισμένο σκυρόδεμα, με έμφαση στη δομική ασφάλεια, τη λειτουργικότητα και τη βελτιστοποίηση του φέροντος οργανισμού.",
+      "en": "Structural and seismic design of multi-storey reinforced concrete residential developments, with emphasis on structural safety, functionality, and optimization of the load-bearing system."
+    },
+
+    "services": {
+      "el": [
+        "Στατική Μελέτη",
+        "Αντισεισμικός Σχεδιασμός",
+        "Ανάλυση Φέροντος Οργανισμού",
+        "Στατικά Σχέδια",
+        "Λεπτομέρειες Οπλισμού"
+      ],
+      "en": [
+        "Structural Design",
+        "Seismic Design",
+        "Structural Analysis",
+        "Structural Drawings",
+        "Reinforcement Detailing"
+      ]
+    },
+
     "cover": "gallery/1%20-%20Apartment%20Buildings/multi-storey-block.jpg",
+
     "images": [
       {
         "src": "gallery/1%20-%20Apartment%20Buildings/multi-storey-block.jpg",
@@ -23,13 +59,50 @@
       }
     ]
   },
+
   {
     "id": "semi-detached-houses",
     "title": {
       "el": "Διώροφη κατοικία από οπλισμένο σκυρόδεμα",
-      "en": "Semi-Detached Houses"
+      "en": "Two-Storey Reinforced Concrete Residence"
     },
+
+    "category": "residential",
+
+    "categoryLabel": {
+      "el": "Στατική & Αντισεισμική Μελέτη",
+      "en": "Structural & Seismic Design"
+    },
+
+    "location": {
+      "el": "Κύπρος",
+      "en": "Cyprus"
+    },
+
+    "description": {
+      "el": "Στατική και αντισεισμική μελέτη σύγχρονης διώροφης κατοικίας από οπλισμένο σκυρόδεμα, σχεδιασμένη σύμφωνα με τους Ευρωκώδικες με έμφαση στη δομική ασφάλεια, την αρχιτεκτονική ελευθερία και τη λειτουργικότητα του χώρου.",
+      "en": "Structural and seismic design of a modern two-storey reinforced concrete residence, designed in accordance with the Eurocodes, with emphasis on structural safety, architectural freedom, and functional living spaces."
+    },
+
+    "services": {
+      "el": [
+        "Στατική Μελέτη",
+        "Αντισεισμικός Σχεδιασμός",
+        "Ανάλυση Φέροντος Οργανισμού",
+        "Στατικά Σχέδια",
+        "Λεπτομέρειες Οπλισμού"
+      ],
+      "en": [
+        "Structural Design",
+        "Seismic Design",
+        "Structural Analysis",
+        "Structural Drawings",
+        "Reinforcement Detailing"
+      ]
+    },
+
     "cover": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
+
     "images": [
       {
         "src": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
@@ -40,13 +113,50 @@
       }
     ]
   },
+
   {
     "id": "detached-villas",
     "title": {
       "el": "Μονοκατοικίες",
       "en": "Detached Villas"
     },
+
+    "category": "residential",
+
+    "categoryLabel": {
+      "el": "Στατική & Αντισεισμική Μελέτη",
+      "en": "Structural & Seismic Design"
+    },
+
+    "location": {
+      "el": "Κύπρος",
+      "en": "Cyprus"
+    },
+
+    "description": {
+      "el": "Στατική και αντισεισμική μελέτη σύγχρονων μονοκατοικιών από οπλισμένο σκυρόδεμα, με έμφαση στην ασφάλεια, τη λειτουργικότητα και τον ορθολογικό δομικό σχεδιασμό.",
+      "en": "Structural and seismic design of modern reinforced concrete detached residences, with emphasis on safety, functionality, and rational structural design."
+    },
+
+    "services": {
+      "el": [
+        "Στατική Μελέτη",
+        "Αντισεισμικός Σχεδιασμός",
+        "Ανάλυση Φέροντος Οργανισμού",
+        "Στατικά Σχέδια",
+        "Λεπτομέρειες Οπλισμού"
+      ],
+      "en": [
+        "Structural Design",
+        "Seismic Design",
+        "Structural Analysis",
+        "Structural Drawings",
+        "Reinforcement Detailing"
+      ]
+    },
+
     "cover": "gallery/3%20-%20Detached%20Villas/concrete-villa.webp",
+
     "images": [
       {
         "src": "gallery/3%20-%20Detached%20Villas/concrete-villa.webp",

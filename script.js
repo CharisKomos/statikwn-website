@@ -12,9 +12,11 @@ nav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => nav.classList.remove('open'));
 });
 
+
 /* ------------------------------------------------------------------ */
-/*  i18n — Greek (default) / English                                   */
+/*  i18n — Greek (default) / English                                  */
 /* ------------------------------------------------------------------ */
+
 const translations = {
   el: {
     'meta.title': 'STATIKΩN — Υπηρεσίες Πολιτικού Μηχανικού',
@@ -32,37 +34,60 @@ const translations = {
 
     'services.title': 'Υπηρεσίες',
     'services.subtitle': 'Τεχνικές υπηρεσίες με έμφαση στην ασφάλεια, την αξιοπιστία και την πρακτική εφαρμογή στο εργοτάξιο.',
+
     'svc.struct.title': 'Στατικές & Αντισεισμικές Μελέτες',
     'svc.struct.desc': 'Μελέτη και σχεδιασμός φέροντα οργανισμού για κατοικίες, προσθήκες, εμπορικά και ειδικά έργα από οπλισμένο σκυρόδεμα ή μεταλλικές κατασκευές.',
+
     'svc.consult.title': 'Τεχνική Συμβουλευτική',
     'svc.consult.desc': 'Υποστήριξη σε θέματα επιλογής στατικής λύσης, κανονισμών, υλικών, κόστους και κατασκευασιμότητας.',
+
     'svc.superv.title': 'Επίβλεψη & Υποστήριξη Έργου',
     'svc.superv.desc': 'Τεχνική παρακολούθηση, έλεγχος εφαρμογής της μελέτης και υποστήριξη κατά τη διάρκεια της κατασκευής.',
+
     'svc.inspect.title': 'Αποτίμηση Υφιστάμενων Κτιρίων',
     'svc.inspect.desc': 'Έλεγχος υφιστάμενων κατασκευών, αξιολόγηση φέρουσας ικανότητας και τεχνική τεκμηρίωση για προσθήκες, αλλαγές ή επεμβάσεις.',
+
     'svc.permit.title': 'Σχέδια, Άδειες & Τεκμηρίωση',
     'svc.permit.desc': 'Προετοιμασία στατικών σχεδίων, τεχνικών εγγράφων και απαιτούμενων στοιχείων για αδειοδοτήσεις και συντονισμό μελετών.',
+
     'svc.renov.title': 'Ενίσχυση & Αναβάθμιση Κατασκευών',
     'svc.renov.desc': 'Προτάσεις ενίσχυσης για υφιστάμενα κτίρια, ανακαινίσεις/προσθήκες, επεκτάσεις και βελτίωση της σεισμικής συμπεριφοράς.',
 
-    'portfolio.title': 'Έργα',
-    'portfolio.subtitle': 'Μια επιλογή από ολοκληρωμένα και τρέχοντα έργα.',
+    'portfolio.label': 'PORTFOLIO',
+    'portfolio.title': 'Επιλεγμένα Έργα',
+    'portfolio.subtitle': 'Μια επιλογή από στατικές μελέτες, αποτιμήσεις, ενισχύσεις και υπηρεσίες επιμέτρησης.',
+
+    'portfolio.filter.all': 'Όλα',
+    'portfolio.filter.residential': 'Κατοικίες',
+    'portfolio.filter.existing': 'Υφιστάμενα Κτίρια',
+    'portfolio.filter.strengthening': 'Ενισχύσεις',
+    'portfolio.filter.qs': 'Quantity Surveying',
+
+    'portfolio.view': 'Προβολή Έργου',
+    'portfolio.overview': 'Περιγραφή Έργου',
+    'portfolio.services': 'Υπηρεσίες',
+
     'proj.1.title': 'Πολυκατοικία',
     'proj.1.desc': 'Τριώροφη οικιστική ανάπτυξη με δώμα, ιδιωτικά μπαλκόνια και καλυμμένο χώρο στάθμευσης στο ισόγειο.',
+
     'proj.2.title': 'Μοντέρνες Διπλοκατοικίες',
     'proj.2.desc': 'Ζεύγος σύγχρονων διώροφων κατοικιών με γλυπτικές όψεις, πλαισιωμένα ανοίγματα και διαμορφωμένους κήπους.',
+
     'proj.3.title': 'Πολυώροφη Πολυκατοικία',
     'proj.3.desc': 'Πολυώροφο κτίριο διαμερισμάτων με προβόλους μπαλκονιών και κομψό κατακόρυφο πυρήνα κυκλοφορίας.',
+
     'proj.4.title': 'Μονοκατοικία',
     'proj.4.desc': 'Μονοκατοικία με εμφανές σκυρόδεμα, καμπύλους τοίχους και υαλοστάσια από δάπεδο έως οροφή.',
 
     'quote.title': 'Ζητήστε Προσφορά',
     'quote.subtitle': 'Πείτε μας για το έργο σας και θα επικοινωνήσουμε μαζί σας με μια εκτίμηση.',
+
     'form.name': 'Ονοματεπώνυμο *',
     'form.email': 'Email *',
     'form.phone': 'Τηλέφωνο',
     'form.ptype': 'Τύπος Έργου',
     'form.select': 'Επιλέξτε…',
+
     'form.opt.struct': 'Στατική / Αντισεισμική Μελέτη',
     'form.opt.consult': 'Τεχνική Συμβουλευτική',
     'form.opt.inspect': 'Αποτίμηση / Έλεγχος Υφιστάμενου Κτιρίου',
@@ -72,6 +97,7 @@ const translations = {
     'form.opt.boq': 'Επιμετρήσεις / Πίνακες Οπλισμού / BBS',
     'form.opt.supervision': 'Επίβλεψη / Τεχνική Υποστήριξη Έργου',
     'form.opt.other': 'Άλλο',
+
     'form.details': 'Λεπτομέρειες Έργου *',
     'form.details.ph': 'Περιγράψτε το έργο σας, την τοποθεσία, το αντικείμενο και το χρονοδιάγραμμα…',
     'form.submit': 'Αποστολή Αιτήματος',
@@ -107,37 +133,60 @@ const translations = {
 
     'services.title': 'Services',
     'services.subtitle': 'Technical services focused on safety, reliability, and practical on-site application.',
+
     'svc.struct.title': 'Structural & Seismic Design',
     'svc.struct.desc': 'Design of the load-bearing structure for homes, additions, commercial and special projects in reinforced concrete or steel.',
+
     'svc.consult.title': 'Technical Consulting',
     'svc.consult.desc': 'Support on structural approach, code compliance, materials, cost, and constructability.',
+
     'svc.superv.title': 'Supervision & Project Support',
     'svc.superv.desc': 'Technical monitoring, verification that construction follows the design, and support throughout the build.',
+
     'svc.inspect.title': 'Assessment of Existing Buildings',
     'svc.inspect.desc': 'Inspection of existing structures, evaluation of load-bearing capacity, and technical documentation for additions, changes, or interventions.',
+
     'svc.permit.title': 'Drawings, Permits & Documentation',
     'svc.permit.desc': 'Preparation of structural drawings, technical documents, and information required for permits and coordination of studies.',
+
     'svc.renov.title': 'Strengthening & Structural Upgrading',
     'svc.renov.desc': 'Strengthening proposals for existing buildings, renovations/additions, extensions, and improved seismic performance.',
 
-    'portfolio.title': 'Portfolio',
-    'portfolio.subtitle': 'A selection of completed and ongoing projects.',
+    'portfolio.label': 'PORTFOLIO',
+    'portfolio.title': 'Selected Projects',
+    'portfolio.subtitle': 'A selection of structural design, assessment, strengthening and quantity surveying projects.',
+
+    'portfolio.filter.all': 'All Projects',
+    'portfolio.filter.residential': 'Residential',
+    'portfolio.filter.existing': 'Existing Structures',
+    'portfolio.filter.strengthening': 'Strengthening',
+    'portfolio.filter.qs': 'Quantity Surveying',
+
+    'portfolio.view': 'View Project',
+    'portfolio.overview': 'Project Overview',
+    'portfolio.services': 'Services Provided',
+
     'proj.1.title': 'Residential Apartment Building',
     'proj.1.desc': 'Three-storey residential development with rooftop terrace, private balconies, and covered ground-floor parking.',
+
     'proj.2.title': 'Modern Semi-Detached Houses',
     'proj.2.desc': 'Pair of contemporary two-storey homes with sculpted façades, framed openings, and landscaped front gardens.',
+
     'proj.3.title': 'Multi-Storey Apartment Block',
     'proj.3.desc': 'Multi-storey apartment building with cantilevered balconies and a sleek vertical circulation core.',
+
     'proj.4.title': 'Detached Villa',
     'proj.4.desc': 'Single-family villa featuring board-formed concrete, curved walls, and floor-to-ceiling glazing.',
 
     'quote.title': 'Request a Quote',
     'quote.subtitle': "Tell us about your project and we'll get back to you with an estimate.",
+
     'form.name': 'Full Name *',
     'form.email': 'Email *',
     'form.phone': 'Phone',
     'form.ptype': 'Project Type',
     'form.select': 'Select…',
+
     'form.opt.struct': 'Structural / Seismic Design',
     'form.opt.consult': 'Technical Consulting',
     'form.opt.inspect': 'Assessment / Inspection of Existing Building',
@@ -147,6 +196,7 @@ const translations = {
     'form.opt.boq': 'Quantity Take-off / Rebar Schedules / BBS',
     'form.opt.supervision': 'Supervision / Technical Project Support',
     'form.opt.other': 'Other',
+
     'form.details': 'Project Details *',
     'form.details.ph': 'Describe your project, location, scope, and timeline…',
     'form.submit': 'Send Request',
@@ -167,80 +217,110 @@ const translations = {
   }
 };
 
+
 const SUPPORTED = ['el', 'en'];
 const DEFAULT_LANG = 'el';
 let currentLang = DEFAULT_LANG;
 
-// Modules (e.g. the portfolio gallery) can register here to be re-rendered
-// whenever the language changes.
+
+// Modules can register here to be re-rendered whenever language changes
 const langListeners = [];
+
 
 function t(key) {
   const dict = translations[currentLang] || translations[DEFAULT_LANG];
   return key in dict ? dict[key] : key;
 }
 
+
 function applyLanguage(lang) {
   if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
+
   currentLang = lang;
 
-  // plain text
   document.querySelectorAll('[data-i18n]').forEach(el => {
     el.textContent = t(el.getAttribute('data-i18n'));
   });
-  // rich text (allows <br>)
+
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     el.innerHTML = t(el.getAttribute('data-i18n-html'));
   });
-  // placeholders
+
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    el.setAttribute('placeholder', t(el.getAttribute('data-i18n-placeholder')));
+    el.setAttribute(
+      'placeholder',
+      t(el.getAttribute('data-i18n-placeholder'))
+    );
   });
 
-  // document + meta
   document.documentElement.lang = lang;
   document.title = t('meta.title');
+
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.setAttribute('content', t('meta.desc'));
 
-  // footer copyright (with current year)
+  if (metaDesc) {
+    metaDesc.setAttribute('content', t('meta.desc'));
+  }
+
   const copy = document.getElementById('footerCopy');
-  if (copy) copy.textContent = t('footer.copy').replace('{year}', new Date().getFullYear());
 
-  // active state on the switcher
+  if (copy) {
+    copy.textContent = t('footer.copy')
+      .replace('{year}', new Date().getFullYear());
+  }
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
     const isActive = btn.getAttribute('data-lang') === lang;
+
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
   });
 
-  try { localStorage.setItem('lang', lang); } catch (e) { /* ignore */ }
+  try {
+    localStorage.setItem('lang', lang);
+  } catch (e) {}
 
-  // let registered modules refresh their own dynamic content
-  langListeners.forEach(fn => { try { fn(currentLang); } catch (e) { /* ignore */ } });
+  langListeners.forEach(fn => {
+    try {
+      fn(currentLang);
+    } catch (e) {}
+  });
 }
 
-// wire up the switch buttons
+
+// Language buttons
 document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
+  btn.addEventListener('click', () => {
+    applyLanguage(btn.getAttribute('data-lang'));
+  });
 });
 
-// initial language: the visitor's saved choice, otherwise Greek (default)
+
+// Initial language
 let initial = DEFAULT_LANG;
+
 try {
   const saved = localStorage.getItem('lang');
-  if (saved && SUPPORTED.includes(saved)) initial = saved;
-} catch (e) { /* ignore */ }
+
+  if (saved && SUPPORTED.includes(saved)) {
+    initial = saved;
+  }
+} catch (e) {}
+
 applyLanguage(initial);
 
+
+
 /* ------------------------------------------------------------------ */
-/*  Quote form: AJAX submit to Formspree so the page doesn't redirect  */
+/*  Quote form                                                        */
 /* ------------------------------------------------------------------ */
+
 const form = document.getElementById('quoteForm');
 const note = document.getElementById('formNote');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
   note.textContent = t('form.sending');
   note.className = 'form-note';
 
@@ -248,171 +328,986 @@ form.addEventListener('submit', async (e) => {
     const res = await fetch(form.action, {
       method: 'POST',
       body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
+      headers: {
+        'Accept': 'application/json'
+      }
     });
+
     if (res.ok) {
       form.reset();
+
       note.textContent = t('form.success');
       note.className = 'form-note success';
+
     } else {
       note.textContent = t('form.error');
       note.className = 'form-note error';
     }
+
   } catch {
     note.textContent = t('form.neterr');
     note.className = 'form-note error';
   }
 });
 
-/* ------------------------------------------------------------------ */
-/*  Portfolio: grouped gallery + full-screen lightbox                  */
-/* ------------------------------------------------------------------ */
-/*
- * Content lives in the /gallery folder — one sub-folder per group, with
- * photos + one .txt caption per photo. A GitHub Action scans that folder
- * on every push and regenerates gallery.json, which is loaded below.
- * You never edit this file to add photos — see gallery/README.txt.
- */
-let galleryGroups = [];
 
-async function loadGallery() {
-  try {
-    const res = await fetch('gallery.json', { cache: 'no-cache' });
-    if (res.ok) galleryGroups = await res.json();
-    else console.warn('gallery.json not found — has the build/GitHub Action run yet?');
-  } catch (e) {
-    console.warn('Could not load gallery.json:', e);
-  }
-  renderGroups();
+
+/* ------------------------------------------------------------------ */
+/*  Portfolio: project cards + filters + project modal                */
+/* ------------------------------------------------------------------ */
+
+/*
+Optional fields που μπορείς αργότερα να προσθέσεις στο gallery.json:
+
+"category": "residential",
+
+"categoryLabel": {
+  "el": "Στατική Μελέτη",
+  "en": "Structural Design"
+},
+
+"location": {
+  "el": "Πάφος, Κύπρος",
+  "en": "Paphos, Cyprus"
+},
+
+"description": {
+  "el": "Περιγραφή έργου",
+  "en": "Project description"
+},
+
+"services": {
+  "el": [
+    "Στατική Μελέτη",
+    "Αντισεισμικός Σχεδιασμός"
+  ],
+  "en": [
+    "Structural Design",
+    "Seismic Design"
+  ]
 }
 
-const groupsContainer = document.getElementById('galleryGroups');
-const lightbox   = document.getElementById('lightbox');
-const lbBody     = document.getElementById('lbBody');
-const lbStage    = document.getElementById('lbStage');
-const lbTitle    = document.getElementById('lbTitle');
-const lbImage    = document.getElementById('lbImage');
-const lbDesc     = document.getElementById('lbDesc');
-const lbThumbs   = document.getElementById('lbThumbs');
-const lbClose    = document.getElementById('lbClose');
-const lbPrev     = document.getElementById('lbPrev');
-const lbNext     = document.getElementById('lbNext');
+Allowed categories:
+
+residential
+existing
+strengthening
+qs
+*/
+
+
+let galleryGroups = [];
 
 let activeGroup = 0;
 let activeIndex = 0;
+let activeFilter = 'all';
+
+
+const groupsContainer = document.getElementById('galleryGroups');
+
+const filterButtons =
+  document.querySelectorAll('.filter-btn');
+
+
+const projectModal =
+  document.getElementById('projectModal');
+
+const modalOverlay =
+  document.getElementById('modalOverlay');
+
+const modalClose =
+  document.getElementById('modalClose');
+
+const modalCategory =
+  document.getElementById('modalCategory');
+
+const modalTitle =
+  document.getElementById('modalTitle');
+
+const modalLocation =
+  document.getElementById('modalLocation');
+
+const modalImage =
+  document.getElementById('modalImage');
+
+const modalDescription =
+  document.getElementById('modalDescription');
+
+const modalServices =
+  document.getElementById('modalServices');
+
+const modalThumbs =
+  document.getElementById('modalThumbs');
+
+const modalPrev =
+  document.getElementById('modalPrev');
+
+const modalNext =
+  document.getElementById('modalNext');
+
+const modalStage =
+  document.querySelector('.modal-stage');
+
+
 
 function tr(obj) {
-  // pick the current language from a { el, en } object, falling back to Greek
-  return (obj && (obj[currentLang] || obj[DEFAULT_LANG])) || '';
-}
 
-function photosLabel(n) {
-  if (currentLang === 'en') return n + (n === 1 ? ' photo' : ' photos');
-  return n + (n === 1 ? ' φωτογραφία' : ' φωτογραφίες');
-}
-
-// Build the clickable group cards in the portfolio grid
-function renderGroups() {
-  if (!groupsContainer) return;
-  groupsContainer.innerHTML = '';
-  galleryGroups.forEach((group, gi) => {
-    const card = document.createElement('button');
-    card.type = 'button';
-    card.className = 'group-card';
-    card.style.backgroundImage = `url('${group.cover}')`;
-    card.setAttribute('aria-label', tr(group.title));
-    card.innerHTML =
-      '<span class="group-overlay"></span>' +
-      '<span class="group-label">' +
-        `<span class="group-title">${tr(group.title)}</span>` +
-        `<span class="group-count">${photosLabel(group.images.length)}</span>` +
-      '</span>';
-    card.addEventListener('click', () => openLightbox(gi, 0));
-    groupsContainer.appendChild(card);
-  });
-}
-
-// Paint the lightbox for the current group + image
-function renderLightbox() {
-  const group = galleryGroups[activeGroup];
-  const item  = group.images[activeIndex];
-  const multi = group.images.length > 1;
-
-  lbTitle.textContent = tr(group.title);
-  lbImage.src = item.src;
-  lbImage.alt = `${tr(group.title)} — ${activeIndex + 1}/${group.images.length}`;
-  lbDesc.textContent = tr(item.desc);
-
-  lbPrev.hidden = !multi;
-  lbNext.hidden = !multi;
-
-  lbThumbs.innerHTML = '';
-  if (multi) {
-    group.images.forEach((im, i) => {
-      const th = document.createElement('img');
-      th.className = 'lb-thumb' + (i === activeIndex ? ' active' : '');
-      th.src = im.src;
-      th.alt = '';
-      th.addEventListener('click', () => { activeIndex = i; renderLightbox(); });
-      lbThumbs.appendChild(th);
-    });
+  if (typeof obj === 'string') {
+    return obj;
   }
+
+  return (
+    obj &&
+    (obj[currentLang] || obj[DEFAULT_LANG])
+  ) || '';
 }
 
-function openLightbox(groupIndex, imageIndex) {
-  activeGroup = groupIndex;
-  activeIndex = imageIndex;
-  renderLightbox();
-  lightbox.classList.add('open');
-  lightbox.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('lb-open');
-  lbClose.focus();
+
+
+function getProjectCategory(group) {
+
+  return String(
+    group.category || 'all'
+  )
+  .toLowerCase()
+  .trim();
+
 }
 
-function closeLightbox() {
-  lightbox.classList.remove('open');
-  lightbox.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('lb-open');
+
+
+function getCategoryLabel(group) {
+
+  if (group.categoryLabel) {
+    return tr(group.categoryLabel);
+  }
+
+  const category = getProjectCategory(group);
+
+  const labels = {
+
+    residential: {
+      el: 'Στατική & Αντισεισμική Μελέτη',
+      en: 'Structural & Seismic Design'
+    },
+
+    existing: {
+      el: 'Αποτίμηση Υφιστάμενου',
+      en: 'Existing Structure Assessment'
+    },
+
+    strengthening: {
+      el: 'Ενίσχυση Κατασκευής',
+      en: 'Structural Strengthening'
+    },
+
+    qs: {
+      el: 'Επιμετρήσεις & BBS',
+      en: 'Quantity Surveying & BBS'
+    }
+
+  };
+
+  return labels[category]
+    ? tr(labels[category])
+    : '';
+
 }
 
-function step(delta) {
-  const imgs = galleryGroups[activeGroup].images;
-  activeIndex = (activeIndex + delta + imgs.length) % imgs.length;
-  renderLightbox();
+
+
+function getProjectDescription(group) {
+
+  if (group.description) {
+    return tr(group.description);
+  }
+
+  const firstImage =
+    Array.isArray(group.images)
+      ? group.images[0]
+      : null;
+
+  return firstImage && firstImage.desc
+    ? tr(firstImage.desc)
+    : '';
+
 }
 
-lbClose.addEventListener('click', closeLightbox);
-lbPrev.addEventListener('click', () => step(-1));
-lbNext.addEventListener('click', () => step(1));
 
-// Click on the backdrop (but not the image / controls) closes the layer
-[lightbox, lbBody, lbStage].forEach(el =>
-  el.addEventListener('click', (e) => { if (e.target === el) closeLightbox(); })
+
+function getProjectServices(group) {
+
+  if (!group.services) {
+    return '';
+  }
+
+
+  if (Array.isArray(group.services)) {
+    return group.services.join(' · ');
+  }
+
+
+  const translated =
+    group.services[currentLang] ||
+    group.services[DEFAULT_LANG];
+
+
+  if (Array.isArray(translated)) {
+    return translated.join(' · ');
+  }
+
+
+  return translated || '';
+
+}
+
+
+
+function getProjectLocation(group) {
+
+  return group.location
+    ? tr(group.location)
+    : '';
+
+}
+
+
+
+function projectMatchesFilter(group, filter) {
+
+  if (filter === 'all') {
+    return true;
+  }
+
+  const category =
+    getProjectCategory(group);
+
+  return category
+    .split(/\s+/)
+    .includes(filter);
+
+}
+
+
+
+async function loadGallery() {
+
+  try {
+
+    const res =
+      await fetch(
+        'gallery.json',
+        {
+          cache: 'no-cache'
+        }
+      );
+
+
+    if (res.ok) {
+
+      galleryGroups =
+        await res.json();
+
+    } else {
+
+      console.warn(
+        'gallery.json not found'
+      );
+
+    }
+
+  } catch (e) {
+
+    console.warn(
+      'Could not load gallery.json:',
+      e
+    );
+
+  }
+
+
+  renderGroups();
+
+}
+
+
+
+/* --------------------------- */
+/* PROJECT CARDS               */
+/* --------------------------- */
+
+function renderGroups() {
+
+  if (!groupsContainer) {
+    return;
+  }
+
+
+  groupsContainer.innerHTML = '';
+
+
+  const visibleGroups =
+    galleryGroups
+
+      .map(
+        (group, index) => ({
+          group,
+          index
+        })
+      )
+
+      .filter(
+        ({ group }) =>
+          projectMatchesFilter(
+            group,
+            activeFilter
+          )
+      );
+
+
+  visibleGroups.forEach(
+    ({ group, index: gi }) => {
+
+      const card =
+        document.createElement(
+          'article'
+        );
+
+
+      card.className =
+        'project-card';
+
+
+      card.tabIndex = 0;
+
+
+      card.setAttribute(
+        'role',
+        'button'
+      );
+
+
+      card.setAttribute(
+        'aria-label',
+        tr(group.title)
+      );
+
+
+      const cover =
+        group.cover ||
+        (
+          group.images &&
+          group.images[0]
+            ? group.images[0].src
+            : ''
+        );
+
+
+      const categoryLabel =
+        getCategoryLabel(group);
+
+
+      const location =
+        getProjectLocation(group);
+
+
+      card.innerHTML = `
+
+        <div class="project-image">
+
+          <img
+            src="${cover}"
+            alt="${tr(group.title)}"
+            loading="lazy"
+          />
+
+          <div class="project-overlay">
+            <span>
+              ${t('portfolio.view')}
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="project-info">
+
+          ${
+            categoryLabel
+              ? `
+                <span class="project-category">
+                  ${categoryLabel}
+                </span>
+              `
+              : ''
+          }
+
+          <h3>
+            ${tr(group.title)}
+          </h3>
+
+          ${
+            location
+              ? `
+                <p>
+                  ${location}
+                </p>
+              `
+              : ''
+          }
+
+        </div>
+
+      `;
+
+
+      const open =
+        () => openProject(gi, 0);
+
+
+      card.addEventListener(
+        'click',
+        open
+      );
+
+
+      card.addEventListener(
+        'keydown',
+        (e) => {
+
+          if (
+            e.key === 'Enter' ||
+            e.key === ' '
+          ) {
+
+            e.preventDefault();
+
+            open();
+
+          }
+
+        }
+      );
+
+
+      groupsContainer
+        .appendChild(card);
+
+    }
+  );
+
+}
+
+
+
+/* --------------------------- */
+/* FILTERS                     */
+/* --------------------------- */
+
+filterButtons.forEach(button => {
+
+  button.addEventListener(
+    'click',
+    () => {
+
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+
+      button.classList.add('active');
+
+
+      activeFilter =
+        button.dataset.filter || 'all';
+
+
+      renderGroups();
+
+    }
+  );
+
+});
+
+
+
+/* --------------------------- */
+/* PROJECT MODAL               */
+/* --------------------------- */
+
+function renderProjectModal() {
+
+  if (
+    !projectModal ||
+    !galleryGroups.length
+  ) {
+    return;
+  }
+
+
+  const group =
+    galleryGroups[activeGroup];
+
+
+  if (!group) {
+    return;
+  }
+
+
+  const images =
+    Array.isArray(group.images)
+      ? group.images
+      : [];
+
+
+  const item =
+    images[activeIndex];
+
+
+  const multi =
+    images.length > 1;
+
+
+
+  modalTitle.textContent =
+    tr(group.title);
+
+
+
+  const category =
+    getCategoryLabel(group);
+
+
+  modalCategory.textContent =
+    category;
+
+
+  modalCategory.hidden =
+    !category;
+
+
+
+  const location =
+    getProjectLocation(group);
+
+
+  modalLocation.textContent =
+    location;
+
+
+  modalLocation.hidden =
+    !location;
+
+
+
+  if (item) {
+
+    modalImage.src =
+      item.src;
+
+
+    modalImage.alt =
+      `${tr(group.title)} — ${activeIndex + 1}/${images.length}`;
+
+  } else {
+
+    modalImage.removeAttribute(
+      'src'
+    );
+
+    modalImage.alt = '';
+
+  }
+
+
+
+  const description =
+    getProjectDescription(group);
+
+
+  modalDescription.textContent =
+    description;
+
+
+  const overviewHeading =
+    modalDescription
+      .previousElementSibling;
+
+
+  modalDescription.hidden =
+    !description;
+
+
+  if (overviewHeading) {
+    overviewHeading.hidden =
+      !description;
+  }
+
+
+
+  const services =
+    getProjectServices(group);
+
+
+  modalServices.textContent =
+    services;
+
+
+  const servicesHeading =
+    modalServices
+      .previousElementSibling;
+
+
+  modalServices.hidden =
+    !services;
+
+
+  if (servicesHeading) {
+    servicesHeading.hidden =
+      !services;
+  }
+
+
+
+  modalPrev.hidden =
+    !multi;
+
+
+  modalNext.hidden =
+    !multi;
+
+
+
+  modalThumbs.innerHTML = '';
+
+
+
+  if (multi) {
+
+    images.forEach(
+      (im, i) => {
+
+        const thumb =
+          document.createElement(
+            'img'
+          );
+
+
+        thumb.className =
+          'modal-thumb' +
+          (
+            i === activeIndex
+              ? ' active'
+              : ''
+          );
+
+
+        thumb.src =
+          im.src;
+
+
+        thumb.alt = '';
+
+
+        thumb.loading =
+          'lazy';
+
+
+        thumb.addEventListener(
+          'click',
+          () => {
+
+            activeIndex = i;
+
+            renderProjectModal();
+
+          }
+        );
+
+
+        modalThumbs
+          .appendChild(thumb);
+
+      }
+    );
+
+  }
+
+}
+
+
+
+function openProject(
+  groupIndex,
+  imageIndex = 0
+) {
+
+  if (!projectModal) {
+    return;
+  }
+
+
+  activeGroup =
+    groupIndex;
+
+
+  activeIndex =
+    imageIndex;
+
+
+  renderProjectModal();
+
+
+  projectModal
+    .classList
+    .add('active');
+
+
+  projectModal
+    .setAttribute(
+      'aria-hidden',
+      'false'
+    );
+
+
+  document.body
+    .classList
+    .add('modal-open');
+
+
+  if (modalClose) {
+    modalClose.focus();
+  }
+
+}
+
+
+
+function closeProject() {
+
+  if (!projectModal) {
+    return;
+  }
+
+
+  projectModal
+    .classList
+    .remove('active');
+
+
+  projectModal
+    .setAttribute(
+      'aria-hidden',
+      'true'
+    );
+
+
+  document.body
+    .classList
+    .remove('modal-open');
+
+}
+
+
+
+function stepProject(delta) {
+
+  const group =
+    galleryGroups[activeGroup];
+
+
+  if (
+    !group ||
+    !group.images ||
+    !group.images.length
+  ) {
+    return;
+  }
+
+
+  activeIndex =
+    (
+      activeIndex +
+      delta +
+      group.images.length
+    ) %
+    group.images.length;
+
+
+  renderProjectModal();
+
+}
+
+
+
+if (modalClose) {
+
+  modalClose.addEventListener(
+    'click',
+    closeProject
+  );
+
+}
+
+
+
+if (modalOverlay) {
+
+  modalOverlay.addEventListener(
+    'click',
+    closeProject
+  );
+
+}
+
+
+
+if (modalPrev) {
+
+  modalPrev.addEventListener(
+    'click',
+    () => stepProject(-1)
+  );
+
+}
+
+
+
+if (modalNext) {
+
+  modalNext.addEventListener(
+    'click',
+    () => stepProject(1)
+  );
+
+}
+
+
+
+// Keyboard controls
+document.addEventListener(
+  'keydown',
+  (e) => {
+
+    if (
+      !projectModal ||
+      !projectModal
+        .classList
+        .contains('active')
+    ) {
+      return;
+    }
+
+
+    if (e.key === 'Escape') {
+
+      closeProject();
+
+    } else if (
+      e.key === 'ArrowLeft'
+    ) {
+
+      stepProject(-1);
+
+    } else if (
+      e.key === 'ArrowRight'
+    ) {
+
+      stepProject(1);
+
+    }
+
+  }
 );
 
-// Keyboard: Esc to close, arrows to navigate
-document.addEventListener('keydown', (e) => {
-  if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'Escape') closeLightbox();
-  else if (e.key === 'ArrowLeft') step(-1);
-  else if (e.key === 'ArrowRight') step(1);
-});
 
-// Swipe left/right on touch devices
+
+// Swipe support
 let touchX = null;
-lbStage.addEventListener('touchstart', (e) => { touchX = e.changedTouches[0].clientX; }, { passive: true });
-lbStage.addEventListener('touchend', (e) => {
-  if (touchX === null) return;
-  const dx = e.changedTouches[0].clientX - touchX;
-  if (Math.abs(dx) > 40 && galleryGroups[activeGroup].images.length > 1) step(dx < 0 ? 1 : -1);
-  touchX = null;
-});
 
-// Re-render when the language changes
+
+if (modalStage) {
+
+  modalStage.addEventListener(
+    'touchstart',
+    (e) => {
+
+      touchX =
+        e.changedTouches[0]
+          .clientX;
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  modalStage.addEventListener(
+    'touchend',
+    (e) => {
+
+      if (touchX === null) {
+        return;
+      }
+
+
+      const dx =
+        e.changedTouches[0]
+          .clientX -
+        touchX;
+
+
+      const group =
+        galleryGroups[activeGroup];
+
+
+      if (
+        Math.abs(dx) > 40 &&
+        group &&
+        group.images &&
+        group.images.length > 1
+      ) {
+
+        stepProject(
+          dx < 0 ? 1 : -1
+        );
+
+      }
+
+
+      touchX = null;
+
+    },
+    {
+      passive: true
+    }
+  );
+
+}
+
+
+
+// Re-render on language change
 langListeners.push(() => {
+
   renderGroups();
-  if (lightbox.classList.contains('open')) renderLightbox();
+
+
+  if (
+    projectModal &&
+    projectModal
+      .classList
+      .contains('active')
+  ) {
+
+    renderProjectModal();
+
+  }
+
 });
 
-// Load gallery content from gallery.json (built from the /gallery folder)
+
+
+// Load gallery
 loadGallery();

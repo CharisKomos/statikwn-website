@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="meta.title">STATIKΩΝ — Υπηρεσίες Πολιτικού Μηχανικού</title>
   <meta name="description" data-i18n="meta.desc" content="Η STATIKΩΝ προσφέρει επαγγελματικές υπηρεσίες πολιτικού μηχανικού, στατικές μελέτες και συμβουλευτική έργων. Ζητήστε προσφορά σήμερα." />
+  <meta name="theme-color" content="#10283e" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="icon" type="image/png" href="images/icon.png" />
@@ -18,7 +19,8 @@
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="Κύρια πλοήγηση">
+        <a href="#about" data-i18n="nav.about">Σχετικά</a>
         <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
         <a href="#portfolio" data-i18n="nav.portfolio">Έργα</a>
         <a href="#quote" data-i18n="nav.quote">Ζητήστε Προσφορά</a>
@@ -35,12 +37,35 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="container hero-inner">
-      <h1 data-i18n-html="hero.title">Στατικές Μελέτες<br />με Ακρίβεια και Ευθύνη</h1>
+      <h1 data-i18n-html="hero.title">Σχεδιάζουμε με ακρίβεια.<br />Ενισχύουμε με γνώση.</h1>
       <p data-i18n="hero.subtitle">Η STATIKΩΝ παρέχει υπηρεσίες στατικών και αντισεισμικών μελετών, αποτίμησης και ενίσχυσης υφιστάμενων κατασκευών, τεχνικής συμβουλευτικής, επιμετρήσεων και υποστήριξης έργων στην Κύπρο.</p>
       <div class="hero-actions">
         <a href="#quote" class="btn btn-primary" data-i18n="hero.cta1">Ζητήστε Προσφορά</a>
         <a href="#portfolio" class="btn btn-outline" data-i18n="hero.cta2">Δείτε τα Έργα</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / WORKING APPROACH -->
+  <section class="section about-section" id="about" aria-labelledby="aboutTitle">
+    <div class="container about-layout">
+      <div class="about-image-wrap">
+        <img class="about-image" src="gallery/1%20-%20Apartment%20Buildings/multi-storey-block.jpg" alt="Σύγχρονο κτίριο οπλισμένου σκυροδέματος" data-i18n-alt="about.imageAlt" loading="lazy" decoding="async" />
+      </div>
+      <div class="about-content">
+        <span class="section-label" data-i18n="about.kicker">Η ΠΡΟΣΕΓΓΙΣΗ ΜΑΣ</span>
+        <h2 id="aboutTitle" data-i18n="about.title">Μηχανική με ουσία, από τη μελέτη έως την εφαρμογή.</h2>
+        <p data-i18n="about.lead">Στο STATIKΩΝ προσεγγίζουμε κάθε έργο με έμφαση στη δομική ασφάλεια, την τεχνική τεκμηρίωση και τη συνεργασία με τους εμπλεκόμενους μελετητές και κατασκευαστές.</p>
+        <p data-i18n="about.text">Στόχος μας είναι οι σαφείς, εφαρμόσιμες λύσεις, με συνέπεια στη μελέτη, στις επιμετρήσεις και στην τεχνική υποστήριξη του έργου.</p>
+        <a href="#services" class="text-link" data-i18n="about.link">Γνωρίστε τις υπηρεσίες μας</a>
+      </div>
+    </div>
+  </section>
+  <section class="approach-band" data-i18n-aria="approach.aria" aria-label="Αρχές εργασίας">
+    <div class="container approach-grid">
+      <div class="approach-item"><span class="approach-number">01</span><div><h3 data-i18n="approach.one.title">Τεχνική ακρίβεια</h3><p data-i18n="approach.one.desc">Αναλυτική προσέγγιση και σαφής τεκμηρίωση.</p></div></div>
+      <div class="approach-item"><span class="approach-number">02</span><div><h3 data-i18n="approach.two.title">Κατασκευασιμότητα</h3><p data-i18n="approach.two.desc">Λύσεις με γνώμονα την πραγματική εφαρμογή.</p></div></div>
+      <div class="approach-item"><span class="approach-number">03</span><div><h3 data-i18n="approach.three.title">Συνεργασία</h3><p data-i18n="approach.three.desc">Συντονισμός μελετών και τεχνική επικοινωνία.</p></div></div>
     </div>
   </section>
 
@@ -107,6 +132,7 @@
 
       <!-- Cards are still generated dynamically by script.js -->
       <div class="projects-grid gallery-groups" id="galleryGroups"></div>
+      <p class="gallery-empty" id="galleryEmpty" data-i18n="portfolio.empty" hidden>Δεν υπάρχουν ακόμη δημοσιευμένα έργα σε αυτή την κατηγορία.</p>
 
     </div>
   </section>
@@ -174,7 +200,7 @@
         </div>
         <div class="contact-item">
           <h3 data-i18n="contact.phone">Τηλέφωνο</h3>
-          <p><a href="tel:+357 96329117">+357 96329117</a></p>
+          <p><a href="tel:+35796329117">+357 96329117</a></p>
         </div>
         <div class="contact-item">
           <h3 data-i18n="contact.office">Γραφείο</h3>

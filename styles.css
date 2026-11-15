@@ -2139,8 +2139,9 @@ body { background: #fff; }
 .nav > a::after, .section-title::after { background: var(--blue-500); }
 .lang-btn { color: #b6c7d1; }
 .hero {
-  background: linear-gradient(105deg,rgba(11,32,51,.92),rgba(16,40,62,.76) 48%,rgba(16,40,62,.44)),
-    url("gallery/3%20-%20Detached%20Villas/concrete-villa.webp");
+  /* Brand-aligned colour background; no building/photo in the hero. */
+  background: linear-gradient(125deg, #0b2033 0%, #10283e 58%, #183b55 100%);
+  background-image: linear-gradient(125deg, #0b2033 0%, #10283e 58%, #183b55 100%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

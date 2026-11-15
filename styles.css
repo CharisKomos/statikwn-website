@@ -2169,3 +2169,42 @@ body { background: #fff; }
 }
 .site-footer { background: #0b2033; }
 @media (max-width:680px) { .nav { background: #0b2033; } .hero { background-position: center; } }
+
+
+/* STATIKΩΝ — About, engineering approach and responsive polish */
+.about-section { background: #fff; }
+.about-layout { display: grid; grid-template-columns: minmax(0,1.02fr) minmax(0,1fr); gap: clamp(2rem,5vw,5rem); align-items: center; }
+.about-image-wrap { min-height: 410px; height: 100%; overflow: hidden; background: #e8eded; border-radius: 10px; }
+.about-image { width: 100%; height: 100%; min-height: 410px; display: block; object-fit: cover; }
+.about-content .section-label { margin-bottom: 1.2rem; }
+.about-content h2 { color: var(--blue-900); font-size: clamp(1.9rem,3.5vw,2.9rem); line-height: 1.18; letter-spacing: -.03em; margin-bottom: 1.4rem; }
+.about-content p { color: var(--gray-600); font-size: 1.02rem; margin-bottom: 1rem; }
+.about-content p:first-of-type { color: var(--gray-700); font-weight: 500; }
+.text-link { display: inline-flex; align-items: center; color: var(--blue-700); font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--blue-400); padding-bottom: .3rem; margin-top: .6rem; }
+.text-link:hover { color: var(--blue-900); border-bottom-color: var(--blue-900); }
+.text-link:focus-visible { outline: 3px solid var(--blue-300); outline-offset: 4px; }
+.approach-band { padding: 2.6rem 0; background: var(--blue-900); color: #fff; }
+.approach-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+.approach-item { display: flex; gap: 1rem; align-items: flex-start; padding: .5rem 1.4rem .5rem 0; }
+.approach-item + .approach-item { border-left: 1px solid rgba(255,255,255,.18); padding-left: 1.5rem; }
+.approach-number { color: #9bc9dc; font-size: .78rem; font-weight: 800; letter-spacing: .1em; padding-top: .26rem; }
+.approach-item h3 { font-size: 1.03rem; color: #fff; margin-bottom: .35rem; }
+.approach-item p { font-size: .9rem; color: rgba(255,255,255,.75); line-height: 1.5; }
+.gallery-empty { padding: 2.3rem; margin-top: 1.5rem; text-align: center; color: var(--gray-600); background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; }
+.filter-btn[hidden], .gallery-empty[hidden] { display: none !important; }
+.card { min-height: 280px; }
+.card-icon { width: 54px; height: 54px; font-size: 1.5rem; }
+.contact-item { box-shadow: var(--shadow-sm); }
+.nav > a:focus-visible, .lang-btn:focus-visible, .btn:focus-visible { outline: 3px solid #9bc9dc; outline-offset: 4px; }
+@media (max-width: 900px) {
+ .about-layout { gap: 2rem; }
+ .about-image-wrap,.about-image { min-height: 340px; }
+}
+@media (max-width: 680px) {
+ .about-layout { grid-template-columns: 1fr; gap: 1.9rem; }
+ .about-image-wrap,.about-image { min-height: 0; height: auto; aspect-ratio: 4 / 3; }
+ .approach-grid { grid-template-columns: 1fr; gap: 0; }
+ .approach-item { padding: .8rem 0; }
+ .approach-item + .approach-item { border-left: 0; border-top: 1px solid rgba(255,255,255,.18); padding-left: 0; }
+ .card { min-height: auto; }
+}

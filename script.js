@@ -9,7 +9,10 @@ navToggle.addEventListener('click', () => {
 
 // Close menu when a nav link is clicked
 nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
 });
 
 
@@ -23,11 +26,26 @@ const translations = {
     'meta.desc': 'STATIKΩΝ: στατικές και αντισεισμικές μελέτες, ενισχύσεις, επιμετρήσεις, δελτία ποσοτήτων, πίνακες κοπής οπλισμού και τεχνικοί έλεγχοι στην Κύπρο.',
 
     'nav.services': 'Υπηρεσίες',
+    'nav.about': 'Σχετικά',
+    'about.kicker': 'Η ΠΡΟΣΕΓΓΙΣΗ ΜΑΣ',
+    'about.title': 'Μηχανική με ουσία, από τη μελέτη έως την εφαρμογή.',
+    'about.lead': 'Στο STATIKΩΝ προσεγγίζουμε κάθε έργο με έμφαση στη δομική ασφάλεια, την τεχνική τεκμηρίωση και τη συνεργασία με τους εμπλεκόμενους μελετητές και κατασκευαστές.',
+    'about.text': 'Στόχος μας είναι οι σαφείς, εφαρμόσιμες λύσεις, με συνέπεια στη μελέτη, στις επιμετρήσεις και στην τεχνική υποστήριξη του έργου.',
+    'about.link': 'Γνωρίστε τις υπηρεσίες μας',
+    'about.imageAlt': 'Σύγχρονο κτίριο οπλισμένου σκυροδέματος',
+    'approach.aria': 'Αρχές εργασίας',
+    'approach.one.title': 'Τεχνική ακρίβεια',
+    'approach.one.desc': 'Αναλυτική προσέγγιση και σαφής τεκμηρίωση.',
+    'approach.two.title': 'Κατασκευασιμότητα',
+    'approach.two.desc': 'Λύσεις με γνώμονα την πραγματική εφαρμογή.',
+    'approach.three.title': 'Συνεργασία',
+    'approach.three.desc': 'Συντονισμός μελετών και τεχνική επικοινωνία.',
+    'portfolio.empty': 'Δεν υπάρχουν ακόμη δημοσιευμένα έργα σε αυτή την κατηγορία.',
     'nav.portfolio': 'Έργα',
     'nav.quote': 'Ζητήστε Προσφορά',
     'nav.contact': 'Επικοινωνία',
 
-    'hero.title': 'Στατικές Μελέτες<br />με Ακρίβεια και Ευθύνη',
+    'hero.title': 'Σχεδιάζουμε με ακρίβεια.<br />Ενισχύουμε με γνώση.',
     'hero.subtitle': 'Η STATIKΩΝ παρέχει στατικές και αντισεισμικές μελέτες, στατική αναβάθμιση, επιμετρήσεις και δελτία ποσοτήτων, πίνακες κοπής οπλισμού και τεχνική υποστήριξη έργων στην Κύπρο.',
     'hero.cta1': 'Ζητήστε Προσφορά',
     'hero.cta2': 'Δείτε τα Έργα',
@@ -55,7 +73,7 @@ const translations = {
 
     'portfolio.label': 'PORTFOLIO',
     'portfolio.title': 'Επιλεγμένα Έργα',
-    'portfolio.subtitle': 'Μια επιλογή από στατικές μελέτες, αποτιμήσεις, ενισχύσεις και υπηρεσίες επιμέτρησης.',
+    'portfolio.subtitle': 'Ενδεικτικές εργασίες στατικής και αντισεισμικής μελέτης από το Portfolio μας.',
 
     'portfolio.filter.all': 'Όλα',
     'portfolio.filter.residential': 'Κατοικίες',
@@ -124,11 +142,26 @@ const translations = {
     'meta.desc': 'STATIKΩΝ provides structural and seismic design, structural upgrades, quantity take-offs, bills of quantities, bar bending schedules and technical inspections in Cyprus.',
 
     'nav.services': 'Services',
+    'nav.about': 'About',
+    'about.kicker': 'OUR APPROACH',
+    'about.title': 'Engineering with purpose, from design to construction.',
+    'about.lead': 'At STATIKΩΝ, each project is approached with a focus on structural safety, technical clarity and collaboration with designers and contractors.',
+    'about.text': 'Our aim is to develop clear, practical solutions across structural design, quantity take-offs and technical project support.',
+    'about.link': 'Explore our services',
+    'about.imageAlt': 'Modern reinforced concrete building',
+    'approach.aria': 'Our working principles',
+    'approach.one.title': 'Technical precision',
+    'approach.one.desc': 'Detailed analysis and clear documentation.',
+    'approach.two.title': 'Buildability',
+    'approach.two.desc': 'Practical solutions suited to construction.',
+    'approach.three.title': 'Collaboration',
+    'approach.three.desc': 'Design coordination and technical communication.',
+    'portfolio.empty': 'No projects have been published in this category yet.',
     'nav.portfolio': 'Portfolio',
     'nav.quote': 'Get a Quote',
     'nav.contact': 'Contact',
 
-    'hero.title': 'Structural Design<br />with Precision and Responsibility',
+    'hero.title': 'Precision in design.<br />Confidence in structures.',
     'hero.subtitle': 'STATIKΩΝ provides structural and seismic design, structural upgrading, quantity take-offs and bills of quantities, bar bending schedules and technical project support across Cyprus.',
     'hero.cta1': 'Request a Quote',
     'hero.cta2': 'View Projects',
@@ -156,7 +189,7 @@ const translations = {
 
     'portfolio.label': 'PORTFOLIO',
     'portfolio.title': 'Selected Projects',
-    'portfolio.subtitle': 'A selection of structural design, assessment, strengthening and quantity surveying projects.',
+    'portfolio.subtitle': 'A selection of structural and seismic design work from our portfolio.',
 
     'portfolio.filter.all': 'All Projects',
     'portfolio.filter.residential': 'Residential',
@@ -248,6 +281,13 @@ function applyLanguage(lang) {
 
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     el.innerHTML = t(el.getAttribute('data-i18n-html'));
+  });
+
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    el.setAttribute('alt', t(el.getAttribute('data-i18n-alt')));
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
   });
 
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
@@ -408,6 +448,7 @@ let activeFilter = 'all';
 
 
 const groupsContainer = document.getElementById('galleryGroups');
+const galleryEmpty = document.getElementById('galleryEmpty');
 
 const filterButtons =
   document.querySelectorAll('.filter-btn');
@@ -636,10 +677,23 @@ async function loadGallery() {
   }
 
 
+  refreshAvailableFilters();
   renderGroups();
 
 }
 
+function refreshAvailableFilters() {
+  filterButtons.forEach(button => {
+    const filter = button.dataset.filter || 'all';
+    const hasItems = filter === 'all' || galleryGroups.some(group => projectMatchesFilter(group, filter));
+    button.hidden = !hasItems;
+    button.disabled = !hasItems;
+  });
+  if (!Array.from(filterButtons).some(btn => btn.dataset.filter === activeFilter && !btn.hidden)) {
+    activeFilter = 'all';
+    filterButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filter === 'all'));
+  }
+}
 
 
 /* --------------------------- */
@@ -674,6 +728,8 @@ function renderGroups() {
           )
       );
 
+
+  if (galleryEmpty) galleryEmpty.hidden = visibleGroups.length > 0;
 
   visibleGroups.forEach(
     ({ group, index: gi }) => {

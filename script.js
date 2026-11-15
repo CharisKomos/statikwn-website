@@ -76,7 +76,10 @@ const translations = {
     'portfolio.subtitle': 'Ενδεικτικές εργασίες στατικής και αντισεισμικής μελέτης από το Portfolio μας.',
 
     'portfolio.filter.all': 'Όλα',
-    'portfolio.filter.residential': 'Κατοικίες',
+    'portfolio.filter.building': 'Οικοδομικά Έργα',
+    'portfolio.filter.technical': 'Τεχνικά Έργα',
+    'portfolio.filter.inspection': 'Οπτικοί Έλεγχοι & Τεχνικές Εκθέσεις',
+    'portfolio.filter.residential': 'Οικοδομικά Έργα',
     'portfolio.filter.existing': 'Υφιστάμενα Κτίρια',
     'portfolio.filter.strengthening': 'Στατική & Αντισεισμική Αναβάθμιση',
     'portfolio.filter.qs': 'Επιμετρήσεις & Δελτία Ποσοτήτων',
@@ -192,7 +195,10 @@ const translations = {
     'portfolio.subtitle': 'A selection of structural and seismic design work from our portfolio.',
 
     'portfolio.filter.all': 'All Projects',
-    'portfolio.filter.residential': 'Residential',
+    'portfolio.filter.building': 'Building Projects',
+    'portfolio.filter.technical': 'Civil Infrastructure Projects',
+    'portfolio.filter.inspection': 'Visual Inspections & Technical Reports',
+    'portfolio.filter.residential': 'Building Projects',
     'portfolio.filter.existing': 'Existing Structures',
     'portfolio.filter.strengthening': 'Structural & Seismic Upgrading',
     'portfolio.filter.qs': 'Quantity Take-offs & Bills of Quantities',
@@ -535,6 +541,18 @@ function getCategoryLabel(group) {
       el: 'Στατική & Αντισεισμική Μελέτη',
       en: 'Structural & Seismic Design'
     },
+    building: {
+      el: 'Οικοδομικά Έργα',
+      en: 'Building Projects'
+    },
+    technical: {
+      el: 'Τεχνικά Έργα',
+      en: 'Civil Infrastructure Projects'
+    },
+    inspection: {
+      el: 'Οπτικοί Έλεγχοι & Τεχνικές Εκθέσεις',
+      en: 'Visual Inspections & Technical Reports'
+    },
 
     existing: {
       el: 'Στατική & Αντισεισμική Αναβάθμιση',
@@ -633,7 +651,9 @@ function projectMatchesFilter(group, filter) {
 
   const categories = category.split(/\s+/);
 
-  // Legacy existing-building projects appear within structural upgrading.
+  // Preserve existing projects, which use the older "residential" category.
+  if (filter === 'building' && categories.some(item => ['building', 'residential'].includes(item))) return true;
+  // Existing-building assessments belong to Structural & Seismic Upgrading.
   if (filter === 'strengthening' && categories.includes('existing')) return true;
   return categories.includes(filter);
 
@@ -683,16 +703,13 @@ async function loadGallery() {
 }
 
 function refreshAvailableFilters() {
+  // All service categories stay visible, even before example projects are published.
+  // Empty categories display a clear message instead of disappearing.
   filterButtons.forEach(button => {
-    const filter = button.dataset.filter || 'all';
-    const hasItems = filter === 'all' || galleryGroups.some(group => projectMatchesFilter(group, filter));
-    button.hidden = !hasItems;
-    button.disabled = !hasItems;
+    button.hidden = false;
+    button.disabled = false;
+    button.setAttribute('aria-pressed', String((button.dataset.filter || 'all') === activeFilter));
   });
-  if (!Array.from(filterButtons).some(btn => btn.dataset.filter === activeFilter && !btn.hidden)) {
-    activeFilter = 'all';
-    filterButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.filter === 'all'));
-  }
 }
 
 
@@ -887,6 +904,9 @@ filterButtons.forEach(button => {
       activeFilter =
         button.dataset.filter || 'all';
 
+      filterButtons.forEach(btn => {
+        btn.setAttribute('aria-pressed', String((btn.dataset.filter || 'all') === activeFilter));
+      });
 
       renderGroups();
 

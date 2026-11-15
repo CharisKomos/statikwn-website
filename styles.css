@@ -2104,3 +2104,68 @@ h4:first-child {
       1 !important;
   }
 }
+
+
+/* ==========================================================
+   STATIKΩΝ — refined identity matched to the navy/blue logo.
+   Overrides only presentation; existing layout/behaviour stays.
+   ========================================================== */
+:root {
+  --blue-950: #0b2033;
+  --blue-900: #10283e;
+  --blue-800: #1b374c;
+  --blue-700: #24516c;
+  --blue-600: #267fa4;
+  --blue-500: #329ac5;
+  --blue-400: #63adcd;
+  --blue-300: #9bc9dc;
+  --blue-100: #e4f0f5;
+  --blue-50: #f3f8fa;
+  --gray-900: #202a31;
+  --gray-800: #34424b;
+  --gray-700: #43515a;
+  --gray-600: #53616b;
+  --gray-500: #697780;
+  --gray-300: #ced5d9;
+  --gray-200: #e1e5e7;
+  --gray-100: #f2f4f4;
+  --gray-50: #f8f9f8;
+  --shadow-sm: 0 4px 14px rgba(16,40,62,.04);
+  --shadow: 0 12px 30px rgba(16,40,62,.08);
+  --shadow-lg: 0 22px 50px rgba(16,40,62,.13);
+}
+body { background: #fff; }
+.site-header { background: rgba(16,40,62,.98); box-shadow: 0 3px 16px rgba(0,0,0,.08); }
+.nav > a::after, .section-title::after { background: var(--blue-500); }
+.lang-btn { color: #b6c7d1; }
+.hero {
+  background: linear-gradient(105deg,rgba(11,32,51,.92),rgba(16,40,62,.76) 48%,rgba(16,40,62,.44)),
+    url("gallery/3%20-%20Detached%20Villas/concrete-villa.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero::before, .hero::after { display: none; }
+.hero-inner::before { color: #9bc9dc; }
+.hero p { color: rgba(255,255,255,.89); }
+.btn-primary { box-shadow: none; background: var(--blue-600); }
+.btn-primary:hover { background: var(--blue-700); box-shadow: 0 7px 19px rgba(16,40,62,.16); }
+.btn-outline:hover { color: var(--blue-900); }
+.section-alt { background: #f5f6f5; }
+.section-title::after { width: 44px; height: 2px; }
+.card, .quote-form, .contact-item { background: #fff; border-color: #dfe4e6; }
+.card { border-radius: 10px; }
+.card::after, .site-footer::before { display: none; }
+.card:hover { border-color: #a7ccd9; transform: translateY(-4px); }
+.card-icon { background: #edf5f8; border-color: #dceaf0; color: var(--blue-600); border-radius: 10px; }
+.card:hover .card-icon { background: var(--blue-600); }
+.project-image { border-radius: 10px; }
+.project-overlay { background: linear-gradient(rgba(11,32,51,.04),rgba(11,32,51,.55)); }
+.project-overlay span { background: rgba(16,40,62,.90); }
+.modal-overlay { background: rgba(8,23,36,.88); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 3px rgba(50,154,197,.12);
+}
+.site-footer { background: #0b2033; }
+@media (max-width:680px) { .nav { background: #0b2033; } .hero { background-position: center; } }

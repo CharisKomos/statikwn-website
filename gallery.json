@@ -258,5 +258,66 @@
         }
       }
     ]
+  },
+  {
+    "id": "agios-athanasios-two-storey-residence",
+    "title": {
+      "el": "Διώροφη Κατοικία — Στατική & Αντισεισμική Μελέτη",
+      "en": "Two-Storey Residence — Structural & Seismic Design"
+    },
+    "category": "building",
+    "categoryLabel": {
+      "el": "Οικοδομικά Έργα",
+      "en": "Building Projects"
+    },
+    "location": {
+      "el": "Άγιος Αθανάσιος, Λεμεσός",
+      "en": "Agios Athanasios, Limassol"
+    },
+    "description": {
+      "el": "Στατική και αντισεισμική μελέτη διώροφης κατοικίας στον Άγιο Αθανάσιο, Λεμεσό. Το αντικείμενο περιλαμβάνει τη μελέτη του φέροντος οργανισμού και την επίβλεψη του έργου.",
+      "en": "Structural and seismic design of a two-storey residence in Agios Athanasios, Limassol. The scope includes structural design and construction supervision."
+    },
+    "services": {
+      "el": [
+        "Στατική & Αντισεισμική Μελέτη",
+        "Επίβλεψη"
+      ],
+      "en": [
+        "Structural & Seismic Design",
+        "Construction Supervision"
+      ]
+    },
+    "cover": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/ext%201.jpg",
+    "images": [
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/ext%201.jpg",
+        "desc": {
+          "el": "Αρχιτεκτονική τρισδιάστατη απεικόνιση της κατοικίας.",
+          "en": "Three-dimensional architectural visualization of the residence."
+        }
+      },
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20233121.png",
+        "desc": {
+          "el": "Τρισδιάστατο μοντέλο του φέροντος οργανισμού.",
+          "en": "Three-dimensional model of the structural system."
+        }
+      },
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20233212.png",
+        "desc": {
+          "el": "Χωρικό αναλυτικό μοντέλο της κατασκευής.",
+          "en": "Spatial analytical model of the structure."
+        }
+      },
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20233341.png",
+        "desc": {
+          "el": "Γραμμικό μοντέλο στατικής ανάλυσης.",
+          "en": "Structural frame analysis model."
+        }
+      }
+    ]
   }
 ]

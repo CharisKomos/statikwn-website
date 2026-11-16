@@ -5,24 +5,19 @@
       "el": "Πολυκατοικίες",
       "en": "Apartment Buildings"
     },
-
     "category": "residential",
-
     "categoryLabel": {
       "el": "Στατική & Αντισεισμική Μελέτη",
       "en": "Structural & Seismic Design"
     },
-
     "location": {
       "el": "Κύπρος",
       "en": "Cyprus"
     },
-
     "description": {
       "el": "Στατική και αντισεισμική μελέτη πολυώροφων οικιστικών αναπτύξεων από οπλισμένο σκυρόδεμα, με έμφαση στη δομική ασφάλεια, τη λειτουργικότητα και τη βελτιστοποίηση του φέροντος οργανισμού.",
       "en": "Structural and seismic design of multi-storey reinforced concrete residential developments, with emphasis on structural safety, functionality, and optimization of the load-bearing system."
     },
-
     "services": {
       "el": [
         "Στατική Μελέτη",
@@ -39,9 +34,7 @@
         "Reinforcement Detailing"
       ]
     },
-
     "cover": "gallery/1%20-%20Apartment%20Buildings/multi-storey-block.jpg",
-
     "images": [
       {
         "src": "gallery/1%20-%20Apartment%20Buildings/multi-storey-block.jpg",
@@ -59,31 +52,25 @@
       }
     ]
   },
-
   {
     "id": "semi-detached-houses",
     "title": {
       "el": "Διώροφη κατοικία από οπλισμένο σκυρόδεμα",
       "en": "Two-Storey Reinforced Concrete Residence"
     },
-
     "category": "residential",
-
     "categoryLabel": {
       "el": "Στατική & Αντισεισμική Μελέτη",
       "en": "Structural & Seismic Design"
     },
-
     "location": {
       "el": "Κύπρος",
       "en": "Cyprus"
     },
-
     "description": {
       "el": "Στατική και αντισεισμική μελέτη σύγχρονης διώροφης κατοικίας από οπλισμένο σκυρόδεμα, σχεδιασμένη σύμφωνα με τους Ευρωκώδικες με έμφαση στη δομική ασφάλεια, την αρχιτεκτονική ελευθερία και τη λειτουργικότητα του χώρου.",
       "en": "Structural and seismic design of a modern two-storey reinforced concrete residence, designed in accordance with the Eurocodes, with emphasis on structural safety, architectural freedom, and functional living spaces."
     },
-
     "services": {
       "el": [
         "Στατική Μελέτη",
@@ -100,9 +87,7 @@
         "Reinforcement Detailing"
       ]
     },
-
     "cover": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
-
     "images": [
       {
         "src": "gallery/2%20-%20Semi-Detached%20Houses/semi-detached-pair.jpg",
@@ -113,31 +98,25 @@
       }
     ]
   },
-
   {
     "id": "detached-villas",
     "title": {
       "el": "Μονοκατοικίες",
       "en": "Detached Villas"
     },
-
     "category": "residential",
-
     "categoryLabel": {
       "el": "Στατική & Αντισεισμική Μελέτη",
       "en": "Structural & Seismic Design"
     },
-
     "location": {
       "el": "Κύπρος",
       "en": "Cyprus"
     },
-
     "description": {
       "el": "Στατική και αντισεισμική μελέτη σύγχρονων μονοκατοικιών από οπλισμένο σκυρόδεμα, με έμφαση στην ασφάλεια, τη λειτουργικότητα και τον ορθολογικό δομικό σχεδιασμό.",
       "en": "Structural and seismic design of modern reinforced concrete detached residences, with emphasis on safety, functionality, and rational structural design."
     },
-
     "services": {
       "el": [
         "Στατική Μελέτη",
@@ -154,15 +133,189 @@
         "Reinforcement Detailing"
       ]
     },
-
     "cover": "gallery/3%20-%20Detached%20Villas/concrete-villa.webp",
-
     "images": [
       {
         "src": "gallery/3%20-%20Detached%20Villas/concrete-villa.webp",
         "desc": {
           "el": "Στατική και αντισεισμική μελέτη σύγχρονης διώροφης κατοικίας από οπλισμένο σκυρόδεμα, σχεδιασμένη σύμφωνα με τους Ευρωκώδικες με έμφαση στην ασφάλεια, τη λειτουργικότητα και τον ορθολογικό δομικό σχεδιασμό.",
           "en": "Structural and seismic design of a modern two-storey reinforced concrete residence, designed in accordance with the Eurocodes, with emphasis on safety, functionality, and rational structural design."
+        }
+      }
+    ]
+  },
+  {
+    "id": "agios-athanasios-four-storey-apartment",
+    "title": {
+      "el": "Τετραώροφη Πολυκατοικία — Στατική & Αντισεισμική Μελέτη",
+      "en": "Four-Storey Apartment Building — Structural & Seismic Design"
+    },
+    "category": "building",
+    "categoryLabel": {
+      "el": "Οικοδομικά Έργα",
+      "en": "Building Projects"
+    },
+    "location": {
+      "el": "Άγιος Αθανάσιος, Λεμεσός",
+      "en": "Agios Athanasios, Limassol"
+    },
+    "description": {
+      "el": "Στατική και αντισεισμική μελέτη τετραώροφης πολυκατοικίας στον Άγιο Αθανάσιο, Λεμεσό. Το αντικείμενο περιλαμβάνει τη μελέτη του φέροντος οργανισμού και την επίβλεψη του έργου.",
+      "en": "Structural and seismic design of a four-storey apartment building in Agios Athanasios, Limassol. The scope includes structural design and construction supervision."
+    },
+    "services": {
+      "el": [
+        "Στατική & Αντισεισμική Μελέτη",
+        "Επίβλεψη"
+      ],
+      "en": [
+        "Structural & Seismic Design",
+        "Construction Supervision"
+      ]
+    },
+    "cover": "gallery/5%20-%20Agios%20Athanasios%20Apartment%20Building/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20230658.png",
+    "images": [
+      {
+        "src": "gallery/5%20-%20Agios%20Athanasios%20Apartment%20Building/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20230658.png",
+        "desc": {
+          "el": "Τρισδιάστατη απεικόνιση του φέροντος οργανισμού.",
+          "en": "Three-dimensional representation of the structural system."
+        }
+      },
+      {
+        "src": "gallery/5%20-%20Agios%20Athanasios%20Apartment%20Building/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20230804.png",
+        "desc": {
+          "el": "Τρισδιάστατη απεικόνιση του αναλυτικού στατικού μοντέλου.",
+          "en": "Three-dimensional analytical structural model."
+        }
+      },
+      {
+        "src": "gallery/5%20-%20Agios%20Athanasios%20Apartment%20Building/1.png",
+        "desc": {
+          "el": "Χωρικό μοντέλο στατικής ανάλυσης.",
+          "en": "Spatial structural analysis model."
+        }
+      }
+    ]
+  },
+  {
+    "id": "sia-two-storey-residence-basement",
+    "title": {
+      "el": "Διώροφη Κατοικία με Υπόγειο — Στατική & Αντισεισμική Μελέτη",
+      "en": "Two-Storey Residence with Basement — Structural & Seismic Design"
+    },
+    "category": "building",
+    "categoryLabel": {
+      "el": "Οικοδομικά Έργα",
+      "en": "Building Projects"
+    },
+    "location": {
+      "el": "Σια, Λευκωσία",
+      "en": "Sia, Nicosia"
+    },
+    "description": {
+      "el": "Στατική και αντισεισμική μελέτη διώροφης κατοικίας με υπόγειο στη Σια, Λευκωσία. Το αντικείμενο περιλαμβάνει τη μελέτη του φέροντος οργανισμού και την επίβλεψη του έργου.",
+      "en": "Structural and seismic design of a two-storey residence with a basement in Sia, Nicosia. The scope includes structural design and construction supervision."
+    },
+    "services": {
+      "el": [
+        "Στατική & Αντισεισμική Μελέτη",
+        "Επίβλεψη"
+      ],
+      "en": [
+        "Structural & Seismic Design",
+        "Construction Supervision"
+      ]
+    },
+    "cover": "gallery/6%20-%20Sia%20Residence/%CE%A0%CE%A1%CE%9F%CE%A3%CE%9F%CE%A8%CE%97%20%CE%A4%CE%A1%CE%99%CE%A3%CE%94%CE%99%CE%91%CE%A3%CE%A4%CE%91%CE%A4%CE%9F.jpg",
+    "images": [
+      {
+        "src": "gallery/6%20-%20Sia%20Residence/%CE%A0%CE%A1%CE%9F%CE%A3%CE%9F%CE%A8%CE%97%20%CE%A4%CE%A1%CE%99%CE%A3%CE%94%CE%99%CE%91%CE%A3%CE%A4%CE%91%CE%A4%CE%9F.jpg",
+        "desc": {
+          "el": "Αρχιτεκτονική τρισδιάστατη απεικόνιση της κατοικίας.",
+          "en": "Three-dimensional architectural visualization of the residence."
+        }
+      },
+      {
+        "src": "gallery/6%20-%20Sia%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20231416.png",
+        "desc": {
+          "el": "Τρισδιάστατο μοντέλο φέροντος οργανισμού.",
+          "en": "Three-dimensional model of the load-bearing structure."
+        }
+      },
+      {
+        "src": "gallery/6%20-%20Sia%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20231501.png",
+        "desc": {
+          "el": "Χωρικό αναλυτικό μοντέλο του κτιρίου.",
+          "en": "Spatial analytical model of the building."
+        }
+      },
+      {
+        "src": "gallery/6%20-%20Sia%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20231552.png",
+        "desc": {
+          "el": "Απεικόνιση δομικού συστήματος με γραμμικά στοιχεία.",
+          "en": "Structural frame model showing line elements."
+        }
+      }
+    ]
+  },
+  {
+    "id": "agios-athanasios-two-storey-residence",
+    "title": {
+      "el": "Διώροφη Κατοικία — Στατική & Αντισεισμική Μελέτη",
+      "en": "Two-Storey Residence — Structural & Seismic Design"
+    },
+    "category": "building",
+    "categoryLabel": {
+      "el": "Οικοδομικά Έργα",
+      "en": "Building Projects"
+    },
+    "location": {
+      "el": "Άγιος Αθανάσιος, Λεμεσός",
+      "en": "Agios Athanasios, Limassol"
+    },
+    "description": {
+      "el": "Στατική και αντισεισμική μελέτη διώροφης κατοικίας στον Άγιο Αθανάσιο, Λεμεσό. Το αντικείμενο περιλαμβάνει τη μελέτη του φέροντος οργανισμού και την επίβλεψη του έργου.",
+      "en": "Structural and seismic design of a two-storey residence in Agios Athanasios, Limassol. The scope includes structural design and construction supervision."
+    },
+    "services": {
+      "el": [
+        "Στατική & Αντισεισμική Μελέτη",
+        "Επίβλεψη"
+      ],
+      "en": [
+        "Structural & Seismic Design",
+        "Construction Supervision"
+      ]
+    },
+    "cover": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/ext%201.jpg",
+    "images": [
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/ext%201.jpg",
+        "desc": {
+          "el": "Αρχιτεκτονική τρισδιάστατη απεικόνιση της κατοικίας.",
+          "en": "Three-dimensional architectural visualization of the residence."
+        }
+      },
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20233121.png",
+        "desc": {
+          "el": "Τρισδιάστατο μοντέλο του φέροντος οργανισμού.",
+          "en": "Three-dimensional model of the structural system."
+        }
+      },
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20233212.png",
+        "desc": {
+          "el": "Χωρικό αναλυτικό μοντέλο της κατασκευής.",
+          "en": "Spatial analytical model of the structure."
+        }
+      },
+      {
+        "src": "gallery/7%20-%20Agios%20Athanasios%20Two%20Storey%20Residence/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CF%8C%CF%84%CF%85%CF%80%CE%BF%20%CE%BF%CE%B8%CF%8C%CE%BD%CE%B7%CF%82%202026-11-16%20233341.png",
+        "desc": {
+          "el": "Γραμμικό μοντέλο στατικής ανάλυσης.",
+          "en": "Structural frame analysis model."
         }
       }
     ]

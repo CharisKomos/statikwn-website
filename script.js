@@ -9,7 +9,10 @@ navToggle.addEventListener('click', () => {
 
 // Close menu when a nav link is clicked
 nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
 });
 
 
@@ -19,16 +22,31 @@ nav.querySelectorAll('a').forEach(link => {
 
 const translations = {
   el: {
-    'meta.title': 'STATIKΩN — Υπηρεσίες Πολιτικού Μηχανικού',
-    'meta.desc': 'Η STATIKΩN προσφέρει επαγγελματικές υπηρεσίες πολιτικού μηχανικού, στατικές μελέτες και συμβουλευτική έργων. Ζητήστε προσφορά σήμερα.',
+    'meta.title': 'STATIKΩΝ — Στατικές & Αντισεισμικές Μελέτες',
+    'meta.desc': 'STATIKΩΝ: στατικές και αντισεισμικές μελέτες, ενισχύσεις, επιμετρήσεις, δελτία ποσοτήτων, πίνακες κοπής οπλισμού και τεχνικοί έλεγχοι στην Κύπρο.',
 
     'nav.services': 'Υπηρεσίες',
+    'nav.about': 'Σχετικά',
+    'about.kicker': 'Η ΠΡΟΣΕΓΓΙΣΗ ΜΑΣ',
+    'about.title': 'Μηχανική με ουσία, από τη μελέτη έως την εφαρμογή.',
+    'about.lead': 'Στο STATIKΩΝ προσεγγίζουμε κάθε έργο με έμφαση στη δομική ασφάλεια, την τεχνική τεκμηρίωση και τη συνεργασία με τους εμπλεκόμενους μελετητές και κατασκευαστές.',
+    'about.text': 'Στόχος μας είναι οι σαφείς, εφαρμόσιμες λύσεις, με συνέπεια στη μελέτη, στις επιμετρήσεις και στην τεχνική υποστήριξη του έργου.',
+    'about.link': 'Γνωρίστε τις υπηρεσίες μας',
+    'about.imageAlt': 'Σύγχρονο κτίριο οπλισμένου σκυροδέματος',
+    'approach.aria': 'Αρχές εργασίας',
+    'approach.one.title': 'Τεχνική ακρίβεια',
+    'approach.one.desc': 'Αναλυτική προσέγγιση και σαφής τεκμηρίωση.',
+    'approach.two.title': 'Κατασκευασιμότητα',
+    'approach.two.desc': 'Λύσεις με γνώμονα την πραγματική εφαρμογή.',
+    'approach.three.title': 'Συνεργασία',
+    'approach.three.desc': 'Συντονισμός μελετών και τεχνική επικοινωνία.',
+    'portfolio.empty': 'Δεν υπάρχουν ακόμη δημοσιευμένα έργα σε αυτή την κατηγορία.',
     'nav.portfolio': 'Έργα',
     'nav.quote': 'Ζητήστε Προσφορά',
     'nav.contact': 'Επικοινωνία',
 
-    'hero.title': 'Στατικές Μελέτες<br />με Ακρίβεια και Ευθύνη',
-    'hero.subtitle': 'Η STATIKΩN παρέχει υπηρεσίες στατικών και αντισεισμικών μελετών, αποτίμησης και ενίσχυσης υφιστάμενων κατασκευών, τεχνικής συμβουλευτικής, επιμετρήσεων και υποστήριξης έργων στην Κύπρο.',
+    'hero.title': 'Σχεδιάζουμε με ακρίβεια.<br />Ενισχύουμε με γνώση.',
+    'hero.subtitle': 'Η STATIKΩΝ παρέχει στατικές και αντισεισμικές μελέτες, στατική αναβάθμιση, επιμετρήσεις και δελτία ποσοτήτων, πίνακες κοπής οπλισμού και τεχνική υποστήριξη έργων στην Κύπρο.',
     'hero.cta1': 'Ζητήστε Προσφορά',
     'hero.cta2': 'Δείτε τα Έργα',
 
@@ -36,32 +54,36 @@ const translations = {
     'services.subtitle': 'Τεχνικές υπηρεσίες με έμφαση στην ασφάλεια, την αξιοπιστία και την πρακτική εφαρμογή στο εργοτάξιο.',
 
     'svc.struct.title': 'Στατικές & Αντισεισμικές Μελέτες',
-    'svc.struct.desc': 'Μελέτη και σχεδιασμός φέροντα οργανισμού για κατοικίες, προσθήκες, εμπορικά και ειδικά έργα από οπλισμένο σκυρόδεμα ή μεταλλικές κατασκευές.',
+    'svc.struct.desc': 'Στατική ανάλυση και σχεδιασμός νέων κατασκευών από οπλισμένο σκυρόδεμα, χάλυβα και άλλα δομικά υλικά.',
 
-    'svc.consult.title': 'Τεχνική Συμβουλευτική',
-    'svc.consult.desc': 'Υποστήριξη σε θέματα επιλογής στατικής λύσης, κανονισμών, υλικών, κόστους και κατασκευασιμότητας.',
+    'svc.consult.title': 'Πίνακες Κοπής & Κάμψης Οπλισμού',
+    'svc.consult.desc': 'Σύνταξη πινάκων κοπής και διαμόρφωσης οπλισμού (BBS) με διαστάσεις, σχήματα και ποσότητες ανά δομικό στοιχείο.',
 
-    'svc.superv.title': 'Επίβλεψη & Υποστήριξη Έργου',
-    'svc.superv.desc': 'Τεχνική παρακολούθηση, έλεγχος εφαρμογής της μελέτης και υποστήριξη κατά τη διάρκεια της κατασκευής.',
+    'svc.superv.title': 'Επίβλεψη & Τεχνικός Έλεγχος Έργων',
+    'svc.superv.desc': 'Επιτόπιοι έλεγχοι, παρακολούθηση κατασκευαστικών εργασιών και έλεγχος συμμόρφωσης με σχέδια και προδιαγραφές.',
 
-    'svc.inspect.title': 'Αποτίμηση Υφιστάμενων Κτιρίων',
-    'svc.inspect.desc': 'Έλεγχος υφιστάμενων κατασκευών, αξιολόγηση φέρουσας ικανότητας και τεχνική τεκμηρίωση για προσθήκες, αλλαγές ή επεμβάσεις.',
+    'svc.inspect.title': 'Επιμετρήσεις & Δελτία Ποσοτήτων',
+    'svc.inspect.desc': 'Αναλυτικές επιμετρήσεις οικοδομικών εργασιών και σύνταξη Δελτίων Ποσοτήτων (BoQ) για κοστολόγηση και δημοπράτηση έργων.',
 
-    'svc.permit.title': 'Σχέδια, Άδειες & Τεκμηρίωση',
-    'svc.permit.desc': 'Προετοιμασία στατικών σχεδίων, τεχνικών εγγράφων και απαιτούμενων στοιχείων για αδειοδοτήσεις και συντονισμό μελετών.',
+    'svc.permit.title': 'Οπτικοί Έλεγχοι & Τεχνικές Εκθέσεις',
+    'svc.permit.desc': 'Αυτοψίες, καταγραφή φθορών και βλαβών, προκαταρκτική τεχνική αξιολόγηση και σύνταξη τεχνικών εκθέσεων.',
 
-    'svc.renov.title': 'Ενίσχυση & Αναβάθμιση Κατασκευών',
-    'svc.renov.desc': 'Προτάσεις ενίσχυσης για υφιστάμενα κτίρια, ανακαινίσεις/προσθήκες, επεκτάσεις και βελτίωση της σεισμικής συμπεριφοράς.',
+    'svc.renov.title': 'Στατική & Αντισεισμική Αναβάθμιση',
+    'svc.renov.desc': 'Αξιολόγηση στατικής επάρκειας, διερεύνηση δομικών βλαβών και σχεδιασμός επεμβάσεων ενίσχυσης υφιστάμενων κατασκευών.',
 
     'portfolio.label': 'PORTFOLIO',
     'portfolio.title': 'Επιλεγμένα Έργα',
-    'portfolio.subtitle': 'Μια επιλογή από στατικές μελέτες, αποτιμήσεις, ενισχύσεις και υπηρεσίες επιμέτρησης.',
+    'portfolio.subtitle': 'Ενδεικτικές εργασίες στατικής και αντισεισμικής μελέτης από το Portfolio μας.',
 
     'portfolio.filter.all': 'Όλα',
-    'portfolio.filter.residential': 'Κατοικίες',
+    'portfolio.filter.building': 'Οικοδομικά Έργα',
+    'portfolio.filter.technical': 'Τεχνικά Έργα',
+    'portfolio.filter.inspection': 'Οπτικοί Έλεγχοι & Τεχνικές Εκθέσεις',
+    'portfolio.filter.residential': 'Οικοδομικά Έργα',
     'portfolio.filter.existing': 'Υφιστάμενα Κτίρια',
-    'portfolio.filter.strengthening': 'Ενισχύσεις',
-    'portfolio.filter.qs': 'Quantity Surveying',
+    'portfolio.filter.strengthening': 'Στατική & Αντισεισμική Αναβάθμιση',
+    'portfolio.filter.qs': 'Επιμετρήσεις & Δελτία Ποσοτήτων',
+    'portfolio.filter.bbs': 'Πίνακες Κοπής Οπλισμού',
 
     'portfolio.view': 'Προβολή Έργου',
     'portfolio.overview': 'Περιγραφή Έργου',
@@ -88,14 +110,15 @@ const translations = {
     'form.ptype': 'Τύπος Έργου',
     'form.select': 'Επιλέξτε…',
 
-    'form.opt.struct': 'Στατική / Αντισεισμική Μελέτη',
+    'form.opt.struct': 'Στατικές & Αντισεισμικές Μελέτες',
     'form.opt.consult': 'Τεχνική Συμβουλευτική',
-    'form.opt.inspect': 'Αποτίμηση / Έλεγχος Υφιστάμενου Κτιρίου',
-    'form.opt.renov': 'Ενίσχυση / Αναβάθμιση Κατασκευής',
+    'form.opt.inspect': 'Οπτικοί Έλεγχοι & Τεχνικές Εκθέσεις',
+    'form.opt.renov': 'Στατική & Αντισεισμική Αναβάθμιση',
     'form.opt.extension': 'Προσθήκη / Επέκταση Υφιστάμενου Κτιρίου',
     'form.opt.drawings': 'Στατικά Σχέδια / Τεκμηρίωση για Άδεια',
-    'form.opt.boq': 'Επιμετρήσεις / Πίνακες Οπλισμού / BBS',
-    'form.opt.supervision': 'Επίβλεψη / Τεχνική Υποστήριξη Έργου',
+    'form.opt.boq': 'Επιμετρήσεις & Δελτία Ποσοτήτων',
+    'form.opt.bbs': 'Πίνακες Κοπής & Κάμψης Οπλισμού',
+    'form.opt.supervision': 'Επίβλεψη & Τεχνικός Έλεγχος Έργων',
     'form.opt.other': 'Άλλο',
 
     'form.details': 'Λεπτομέρειες Έργου *',
@@ -113,21 +136,36 @@ const translations = {
     'contact.addr1': 'Ιωνίας 3, 8016',
     'contact.addr2': 'Πάφος, Κύπρος',
 
-    'footer.tagline': 'Υπηρεσίες Πολιτικού Μηχανικού & Στατικών Μελετών',
-    'footer.copy': '© {year} STATIKΩN. Με την επιφύλαξη παντός δικαιώματος.'
+    'footer.tagline': 'Στατικές & Αντισεισμικές Μελέτες | Τεχνικές Υπηρεσίες',
+    'footer.copy': '© {year} STATIKΩΝ. Με την επιφύλαξη παντός δικαιώματος.'
   },
 
   en: {
-    'meta.title': 'STATIKΩN — Civil Engineering Services',
-    'meta.desc': 'STATIKΩN provides professional civil engineering services, structural design, and project consulting. Request a quote today.',
+    'meta.title': 'STATIKΩΝ — Structural & Seismic Engineering',
+    'meta.desc': 'STATIKΩΝ provides structural and seismic design, structural upgrades, quantity take-offs, bills of quantities, bar bending schedules and technical inspections in Cyprus.',
 
     'nav.services': 'Services',
+    'nav.about': 'About',
+    'about.kicker': 'OUR APPROACH',
+    'about.title': 'Engineering with purpose, from design to construction.',
+    'about.lead': 'At STATIKΩΝ, each project is approached with a focus on structural safety, technical clarity and collaboration with designers and contractors.',
+    'about.text': 'Our aim is to develop clear, practical solutions across structural design, quantity take-offs and technical project support.',
+    'about.link': 'Explore our services',
+    'about.imageAlt': 'Modern reinforced concrete building',
+    'approach.aria': 'Our working principles',
+    'approach.one.title': 'Technical precision',
+    'approach.one.desc': 'Detailed analysis and clear documentation.',
+    'approach.two.title': 'Buildability',
+    'approach.two.desc': 'Practical solutions suited to construction.',
+    'approach.three.title': 'Collaboration',
+    'approach.three.desc': 'Design coordination and technical communication.',
+    'portfolio.empty': 'No projects have been published in this category yet.',
     'nav.portfolio': 'Portfolio',
     'nav.quote': 'Get a Quote',
     'nav.contact': 'Contact',
 
-    'hero.title': 'Structural Design<br />with Precision and Responsibility',
-    'hero.subtitle': 'STATIKΩN provides structural and seismic design, assessment and strengthening of existing structures, technical consulting, quantity surveying, and project support across Cyprus.',
+    'hero.title': 'Precision in design.<br />Confidence in structures.',
+    'hero.subtitle': 'STATIKΩΝ provides structural and seismic design, structural upgrading, quantity take-offs and bills of quantities, bar bending schedules and technical project support across Cyprus.',
     'hero.cta1': 'Request a Quote',
     'hero.cta2': 'View Projects',
 
@@ -135,32 +173,36 @@ const translations = {
     'services.subtitle': 'Technical services focused on safety, reliability, and practical on-site application.',
 
     'svc.struct.title': 'Structural & Seismic Design',
-    'svc.struct.desc': 'Design of the load-bearing structure for homes, additions, commercial and special projects in reinforced concrete or steel.',
+    'svc.struct.desc': 'Structural analysis and design of new buildings in reinforced concrete, steel and other structural materials.',
 
-    'svc.consult.title': 'Technical Consulting',
-    'svc.consult.desc': 'Support on structural approach, code compliance, materials, cost, and constructability.',
+    'svc.consult.title': 'Reinforcement Bar Bending Schedules',
+    'svc.consult.desc': 'Preparation of bar bending schedules (BBS), including bar dimensions, shapes and quantities by structural element.',
 
-    'svc.superv.title': 'Supervision & Project Support',
-    'svc.superv.desc': 'Technical monitoring, verification that construction follows the design, and support throughout the build.',
+    'svc.superv.title': 'Construction Supervision & Technical Inspections',
+    'svc.superv.desc': 'Site inspections, monitoring of construction works and verification of compliance with drawings and specifications.',
 
-    'svc.inspect.title': 'Assessment of Existing Buildings',
-    'svc.inspect.desc': 'Inspection of existing structures, evaluation of load-bearing capacity, and technical documentation for additions, changes, or interventions.',
+    'svc.inspect.title': 'Quantity Take-offs & Bills of Quantities',
+    'svc.inspect.desc': 'Detailed construction quantity take-offs and preparation of Bills of Quantities (BoQ) for cost estimation and tendering.',
 
-    'svc.permit.title': 'Drawings, Permits & Documentation',
-    'svc.permit.desc': 'Preparation of structural drawings, technical documents, and information required for permits and coordination of studies.',
+    'svc.permit.title': 'Visual Inspections & Technical Reports',
+    'svc.permit.desc': 'On-site visual inspections, recording of defects and damage, preliminary assessments and technical reports.',
 
-    'svc.renov.title': 'Strengthening & Structural Upgrading',
-    'svc.renov.desc': 'Strengthening proposals for existing buildings, renovations/additions, extensions, and improved seismic performance.',
+    'svc.renov.title': 'Structural & Seismic Upgrading',
+    'svc.renov.desc': 'Structural assessment, investigation of damage and design of strengthening interventions for existing structures.',
 
     'portfolio.label': 'PORTFOLIO',
     'portfolio.title': 'Selected Projects',
-    'portfolio.subtitle': 'A selection of structural design, assessment, strengthening and quantity surveying projects.',
+    'portfolio.subtitle': 'A selection of structural and seismic design work from our portfolio.',
 
     'portfolio.filter.all': 'All Projects',
-    'portfolio.filter.residential': 'Residential',
+    'portfolio.filter.building': 'Building Projects',
+    'portfolio.filter.technical': 'Civil Infrastructure Projects',
+    'portfolio.filter.inspection': 'Visual Inspections & Technical Reports',
+    'portfolio.filter.residential': 'Building Projects',
     'portfolio.filter.existing': 'Existing Structures',
-    'portfolio.filter.strengthening': 'Strengthening',
-    'portfolio.filter.qs': 'Quantity Surveying',
+    'portfolio.filter.strengthening': 'Structural & Seismic Upgrading',
+    'portfolio.filter.qs': 'Quantity Take-offs & Bills of Quantities',
+    'portfolio.filter.bbs': 'Bar Bending Schedules',
 
     'portfolio.view': 'View Project',
     'portfolio.overview': 'Project Overview',
@@ -187,14 +229,15 @@ const translations = {
     'form.ptype': 'Project Type',
     'form.select': 'Select…',
 
-    'form.opt.struct': 'Structural / Seismic Design',
+    'form.opt.struct': 'Structural & Seismic Design',
     'form.opt.consult': 'Technical Consulting',
-    'form.opt.inspect': 'Assessment / Inspection of Existing Building',
-    'form.opt.renov': 'Strengthening / Structural Upgrade',
+    'form.opt.inspect': 'Visual Inspections & Technical Reports',
+    'form.opt.renov': 'Structural & Seismic Upgrading',
     'form.opt.extension': 'Addition / Extension of Existing Building',
     'form.opt.drawings': 'Structural Drawings / Permit Documentation',
-    'form.opt.boq': 'Quantity Take-off / Rebar Schedules / BBS',
-    'form.opt.supervision': 'Supervision / Technical Project Support',
+    'form.opt.boq': 'Quantity Take-offs & Bills of Quantities',
+    'form.opt.bbs': 'Reinforcement Bar Bending Schedules',
+    'form.opt.supervision': 'Construction Supervision & Technical Inspections',
     'form.opt.other': 'Other',
 
     'form.details': 'Project Details *',
@@ -212,8 +255,8 @@ const translations = {
     'contact.addr1': 'Ionias 3, 8016',
     'contact.addr2': 'Paphos, Cyprus',
 
-    'footer.tagline': 'Civil & Structural Engineering Services',
-    'footer.copy': '© {year} STATIKΩN. All rights reserved.'
+    'footer.tagline': 'Structural & Seismic Engineering | Technical Services',
+    'footer.copy': '© {year} STATIKΩΝ. All rights reserved.'
   }
 };
 
@@ -244,6 +287,13 @@ function applyLanguage(lang) {
 
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     el.innerHTML = t(el.getAttribute('data-i18n-html'));
+  });
+
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    el.setAttribute('alt', t(el.getAttribute('data-i18n-alt')));
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
   });
 
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
@@ -404,6 +454,7 @@ let activeFilter = 'all';
 
 
 const groupsContainer = document.getElementById('galleryGroups');
+const galleryEmpty = document.getElementById('galleryEmpty');
 
 const filterButtons =
   document.querySelectorAll('.filter-btn');
@@ -490,20 +541,36 @@ function getCategoryLabel(group) {
       el: 'Στατική & Αντισεισμική Μελέτη',
       en: 'Structural & Seismic Design'
     },
+    building: {
+      el: 'Οικοδομικά Έργα',
+      en: 'Building Projects'
+    },
+    technical: {
+      el: 'Τεχνικά Έργα',
+      en: 'Civil Infrastructure Projects'
+    },
+    inspection: {
+      el: 'Οπτικοί Έλεγχοι & Τεχνικές Εκθέσεις',
+      en: 'Visual Inspections & Technical Reports'
+    },
 
     existing: {
-      el: 'Αποτίμηση Υφιστάμενου',
-      en: 'Existing Structure Assessment'
+      el: 'Στατική & Αντισεισμική Αναβάθμιση',
+      en: 'Structural & Seismic Upgrading'
     },
 
     strengthening: {
-      el: 'Ενίσχυση Κατασκευής',
-      en: 'Structural Strengthening'
+      el: 'Στατική & Αντισεισμική Αναβάθμιση',
+      en: 'Structural & Seismic Upgrading'
     },
 
     qs: {
-      el: 'Επιμετρήσεις & BBS',
-      en: 'Quantity Surveying & BBS'
+      el: 'Επιμετρήσεις & Δελτία Ποσοτήτων',
+      en: 'Quantity Take-offs & Bills of Quantities'
+    },
+    bbs: {
+      el: 'Πίνακες Κοπής Οπλισμού',
+      en: 'Bar Bending Schedules'
     }
 
   };
@@ -582,9 +649,13 @@ function projectMatchesFilter(group, filter) {
   const category =
     getProjectCategory(group);
 
-  return category
-    .split(/\s+/)
-    .includes(filter);
+  const categories = category.split(/\s+/);
+
+  // Preserve existing projects, which use the older "residential" category.
+  if (filter === 'building' && categories.some(item => ['building', 'residential'].includes(item))) return true;
+  // Existing-building assessments belong to Structural & Seismic Upgrading.
+  if (filter === 'strengthening' && categories.includes('existing')) return true;
+  return categories.includes(filter);
 
 }
 
@@ -626,10 +697,20 @@ async function loadGallery() {
   }
 
 
+  refreshAvailableFilters();
   renderGroups();
 
 }
 
+function refreshAvailableFilters() {
+  // All service categories stay visible, even before example projects are published.
+  // Empty categories display a clear message instead of disappearing.
+  filterButtons.forEach(button => {
+    button.hidden = false;
+    button.disabled = false;
+    button.setAttribute('aria-pressed', String((button.dataset.filter || 'all') === activeFilter));
+  });
+}
 
 
 /* --------------------------- */
@@ -664,6 +745,8 @@ function renderGroups() {
           )
       );
 
+
+  if (galleryEmpty) galleryEmpty.hidden = visibleGroups.length > 0;
 
   visibleGroups.forEach(
     ({ group, index: gi }) => {
@@ -821,6 +904,9 @@ filterButtons.forEach(button => {
       activeFilter =
         button.dataset.filter || 'all';
 
+      filterButtons.forEach(btn => {
+        btn.setAttribute('aria-pressed', String((btn.dataset.filter || 'all') === activeFilter));
+      });
 
       renderGroups();
 
